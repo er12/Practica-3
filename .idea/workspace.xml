@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="Comenzando Base de datos">
+    <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
     </list>
     <ignored path="Practica-3.iws" />
@@ -56,31 +55,31 @@
       <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+            <state relative-caret-position="272">
+              <caret line="107" column="120" selection-start-line="107" selection-start-column="120" selection-end-line="107" selection-end-column="120" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1465158971602" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1793:1878" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1939:1976" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1939:2071" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1939:2084" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1939:2085" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="1939:2145" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2206:2380" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2206:2391" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2206:2400" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2206:2438" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2206:2439" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2499:2584" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2499:2764" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="2499:2765" placeholder="CREATE TABLE... IF" />
-                <marker date="1465158971602" expanded="true" signature="3272:3345" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465158971602" expanded="true" signature="3272:3356" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465158971602" expanded="true" signature="3272:3367" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465158971602" expanded="true" signature="4620:4666" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465159074014" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1793:1878" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1939:1976" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1939:2071" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1939:2084" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1939:2085" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="1939:2145" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2206:2380" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2206:2391" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2206:2400" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2206:2438" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2206:2439" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2499:2584" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2499:2764" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="2499:2765" placeholder="CREATE TABLE... IF" />
+                <marker date="1465159074014" expanded="true" signature="3272:3344" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465159074014" expanded="true" signature="3272:3355" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465159074014" expanded="true" signature="3272:3366" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465159074014" expanded="true" signature="4619:4665" placeholder="INSERT INTO ETIQUETA... " />
               </folding>
             </state>
           </provider>
@@ -129,6 +128,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ernesto" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -467,6 +471,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Practica-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Practica-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -832,7 +854,7 @@
       <option name="presentableId" value="Default" />
       <updated>1464980070945</updated>
       <workItem from="1464980077452" duration="734000" />
-      <workItem from="1464995669060" duration="23038000" />
+      <workItem from="1464995669060" duration="23204000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -841,11 +863,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465157296589</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Arreglo de problemita">
+      <created>1465159009584</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465159009585</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23772000" />
+    <option name="totallyTimeSpent" value="23938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="-8" width="1289" height="784" extended-state="6" />
@@ -916,7 +945,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Comenzando Base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comenzando Base de datos" />
+    <MESSAGE value="Arreglo de problemita" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglo de problemita" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -994,31 +1024,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+        <state relative-caret-position="272">
+          <caret line="107" column="120" selection-start-line="107" selection-start-column="120" selection-end-line="107" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1465158971602" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1793:1878" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1939:1976" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1939:2071" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1939:2084" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1939:2085" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="1939:2145" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2206:2380" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2206:2391" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2206:2400" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2206:2438" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2206:2439" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2499:2584" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2499:2764" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="2499:2765" placeholder="CREATE TABLE... IF" />
-            <marker date="1465158971602" expanded="true" signature="3272:3345" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465158971602" expanded="true" signature="3272:3356" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465158971602" expanded="true" signature="3272:3367" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465158971602" expanded="true" signature="4620:4666" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465159074014" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1793:1878" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1939:1976" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1939:2071" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1939:2084" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1939:2085" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="1939:2145" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2206:2380" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2206:2391" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2206:2400" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2206:2438" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2206:2439" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2499:2584" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2499:2764" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="2499:2765" placeholder="CREATE TABLE... IF" />
+            <marker date="1465159074014" expanded="true" signature="3272:3344" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465159074014" expanded="true" signature="3272:3355" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465159074014" expanded="true" signature="3272:3366" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465159074014" expanded="true" signature="4619:4665" placeholder="INSERT INTO ETIQUETA... " />
           </folding>
         </state>
       </provider>

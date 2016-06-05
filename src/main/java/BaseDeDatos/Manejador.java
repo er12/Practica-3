@@ -105,7 +105,7 @@ public class Manejador {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO USUARIOS(USERNAME , NOMBRE ,PASSWORD , ADMINISTRATOR, AUTOR ) VALUES(?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO USUARIOS(USERNAME ,NOMBRE ,PASSWORD , ADMINISTRATOR, AUTOR ) VALUES(?, ?, ?, ?, ?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
             String username = usuario.getUsername();
