@@ -85,7 +85,7 @@ public class Manejador {
                     "PRIMARY KEY (ETIQUETA,COMENTARIO)," +
                     "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (COMENTARIO) REFERENCES COMENTARIOS(ID))";
             stmt.executeUpdate(sql);
-
+//Algo diferente
             conn.commit();
             conn.close();
 
