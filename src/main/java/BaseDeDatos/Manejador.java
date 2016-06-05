@@ -5,19 +5,18 @@ package BaseDeDatos;
  */
 
 
-import modelo.Usuario;
+import modelo.*;
 import org.h2.jdbcx.JdbcConnectionPool;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Manejador {
 
-
     public void startConection()
     {
-
         try {
             Class.forName("org.h2.Driver");
         } catch (ClassNotFoundException e) {
@@ -32,13 +31,9 @@ public class Manejador {
             e.printStackTrace();
         }
 
-
     }
 
-
-
-    public void testConection()
-    {
+    public void testConection() {
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Pracica2", "sa", "");
         Connection conn = null;
@@ -50,6 +45,7 @@ public class Manejador {
         }
         cp.dispose();
     }
+
     public void subir() {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
@@ -61,10 +57,10 @@ public class Manejador {
             String sql;
 
             sql = "CREATE TABLE IF NOT  EXISTS  USUARIOS( USERNAME VARCHAR(20) PRIMARY KEY," +
-                                                         "NOMBRE VARCHAR(50)," +
-                                                         "PASSWORD VARCHAR(20), " +
-                                                         "ADMINISTRATOR BOOLEAN," +
-                                                         "AUTOR BOOLEAN)";
+                    "NOMBRE VARCHAR(50)," +
+                    "PASSWORD VARCHAR(20), " +
+                    "ADMINISTRATOR BOOLEAN," +
+                    "AUTOR BOOLEAN)";
             stmt.executeUpdate(sql);
 
 
@@ -81,11 +77,11 @@ public class Manejador {
                     "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS ETIQUETA_COMENTARIOS(ETIQUETA INTEGER, COMENTARIO INTEGER, " +
+            sql = "CREATE TABLE IF NOT EXISTS ETIQUETA_COMENTARIOS(ETIQUETA INTEGER auto_increment, COMENTARIO INTEGER, " +
                     "PRIMARY KEY (ETIQUETA,COMENTARIO)," +
                     "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (COMENTARIO) REFERENCES COMENTARIOS(ID))";
             stmt.executeUpdate(sql);
-//Algo diferente
+            //Algo diferente
             conn.commit();
             conn.close();
 
@@ -94,8 +90,6 @@ public class Manejador {
         }
 
     }
-
-
 
     public void insertarUsuario(Usuario usuario) {
         Connection conn = null;
@@ -132,10 +126,7 @@ public class Manejador {
             e.printStackTrace();
         }
 
-
     }
-
-
 
     public void insertaretiqueta(Usuario usuario) {
         Connection conn = null;
@@ -163,6 +154,138 @@ public class Manejador {
 
 
     }
+    public void insertarComentario(Comentario comentario) {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            Statement stmt = conn.createStatement();
 
+            String sql = "INSERT INTO COMENTARIO (ID , COMENTARIO , AUTOR , ARTICULO )" +
+                    " VALUES(?,?,?,?)";
+            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+
+            prepareStatement.setString(1,String.valueOf(comentario.getId()));
+            prepareStatement.setString(2,comentario.getComentario());
+            prepareStatement.setString(3,String.valueOf(comentario.getAutor().getNombre()));
+            prepareStatement.setString(4,String.valueOf(comentario.getArticulo()));
+
+            prepareStatement.executeUpdate();
+            conn.commit();
+            conn.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void insertarArticulo(Articulo articulo) {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            Statement stmt = conn.createStatement();
+
+            String sql = "INSERT INTO ARTICULO(ID, TITULO, CUERPO, AUTOR, FECHA)" +
+                    " VALUES(?,?,?,?,?)";
+            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+
+            prepareStatement.setString(1,String.valueOf(articulo.getId()));
+            prepareStatement.setString(2,articulo.getTitulo());
+            prepareStatement.setString(3,articulo.getCuerpo());
+            prepareStatement.setString(4,articulo.getAutor().getUsername());
+            prepareStatement.setString(5,articulo.getFecha().getYear()+ "-" + articulo.getFecha().getMonth()+ "-"+ articulo.getFecha().getDay());
+
+            prepareStatement.executeUpdate();
+
+            sql = "INSERT INTO ETIQUETAS( ETIQUETA)" +
+                    " VALUES(?)";
+
+            List<Etiqueta> etiqViejas = getEtiquetas();
+
+            for(Etiqueta et : articulo.getListaEtiqueta())
+            {
+                if(etiqViejas.contains(et))
+                    continue;
+                prepareStatement = conn.prepareStatement(sql);
+                prepareStatement.setString(1,et.getEtigueta());
+                prepareStatement.executeUpdate();
+            }
+
+            conn.commit();
+            conn.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public List<Etiqueta> getEtiquetas() {
+        List<Etiqueta> etiquetas = new ArrayList<>();
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "select * from estudiante";
+
+            //
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+                Etiqueta e = new Etiqueta();
+                e.setId(rs.getInt("ID"));
+                e.setEtigueta("ETIQUETA");
+                etiquetas.add(e);
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return etiquetas;
+    }
+
+    public void eliminarTodo()
+    {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            Statement stmt = conn.createStatement();
+
+            String sql;
+
+            sql = "DROP TABLE IF EXISTS ETIQUETAS_COMENTARIOS";
+            stmt.executeUpdate(sql);
+            sql = "DROP TABLE IF EXISTS COMENTARIOS";
+            stmt.executeUpdate(sql);
+            sql = "DROP TABLE IF EXISTS ARTICULOS";
+            stmt.executeUpdate(sql);
+            sql = "DROP TABLE IF EXISTS ETIQUETAS";
+            stmt.executeUpdate(sql);
+            sql = "DROP TABLE IF EXISTS USUARIOS";
+            stmt.executeUpdate(sql);
+            conn.commit();
+            conn.close();
+
+        }    catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

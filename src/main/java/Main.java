@@ -11,8 +11,9 @@ public class Main {
     public static void main(String [] args)
     {
         Manejador bd = new Manejador();
-        bd.subir();
-        get("/hello", (req, res) -> "Hello World");
+        //bd.eliminarTodo();
+        bd  .subir();
+        get("/", (req, res) -> "Hello World");
 
     }
 }

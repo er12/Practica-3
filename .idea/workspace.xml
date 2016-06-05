@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Practica-3_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Practica-3_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="Practica-3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,31 +56,47 @@
       <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+            <state relative-caret-position="289">
+              <caret line="170" column="67" selection-start-line="170" selection-start-column="67" selection-end-line="170" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1465160760043" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1793:1876" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1937:1974" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1937:2069" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1937:2082" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1937:2083" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="1937:2145" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2206:2382" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2206:2393" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2206:2402" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2206:2442" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2206:2443" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2503:2588" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2503:2773" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="2503:2774" placeholder="CREATE TABLE... IF" />
-                <marker date="1465160760043" expanded="true" signature="3281:3353" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465160760043" expanded="true" signature="3281:3364" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465160760043" expanded="true" signature="3281:3375" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465160760043" expanded="true" signature="4628:4674" placeholder="INSERT INTO ETIQUETA... " />
+                <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
+                <element signature="method#subir#0;class#Manejador#0" expanded="false" />
+                <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
+                <element signature="method#insertaretiqueta#0;class#Manejador#0" expanded="false" />
+                <element signature="method#getEtiquetas#0;class#Manejador#0" expanded="false" />
+                <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
+                <marker date="1465170700402" expanded="true" signature="1344:1460" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1344:1554" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1344:1593" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1654:1737" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1798:1835" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1798:1930" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1798:1943" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1798:1944" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="1798:2006" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2067:2243" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2067:2254" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2067:2263" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2067:2303" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2067:2304" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2364:2464" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2364:2649" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="2364:2650" placeholder="CREATE TABLE... IF" />
+                <marker date="1465170700402" expanded="true" signature="3183:3255" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465170700402" expanded="true" signature="3183:3266" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465170700402" expanded="true" signature="3183:3277" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465170700402" expanded="true" signature="4527:4573" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465170700402" expanded="true" signature="5276:5377" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465170700402" expanded="true" signature="6298:6395" placeholder="INSERT INTO COMENTARIO... " />
+                <marker date="1465170700402" expanded="true" signature="6970:7037" placeholder="INSERT INTO ETIQUETAS... " />
+                <marker date="1465170700402" expanded="true" signature="7896:7920" placeholder="select * fro... estudiante" />
+                <marker date="1465170700402" expanded="true" signature="8892:8934" placeholder="DROP TABLE E... " />
+                <marker date="1465170700402" expanded="true" signature="8993:9014" placeholder="DROP TABLE A... " />
+                <marker date="1465170700402" expanded="true" signature="8993:9025" placeholder="DROP TABLE C... " />
+                <marker date="1465170700402" expanded="true" signature="9084:9114" placeholder="DROP TABLE A... " />
+                <marker date="1465170700402" expanded="true" signature="9173:9203" placeholder="DROP TABLE E... " />
+                <marker date="1465170700402" expanded="true" signature="9262:9291" placeholder="DROP TABLE U... " />
               </folding>
             </state>
           </provider>
@@ -111,11 +125,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -410,8 +423,8 @@
         <option value="$PROJECT_DIR$/src/main/java/modelo/Articulo.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Etiqueta.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
       </list>
     </option>
@@ -455,84 +468,13 @@
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -915,7 +857,7 @@
       <option name="presentableId" value="Default" />
       <updated>1464980070945</updated>
       <workItem from="1464980077452" duration="734000" />
-      <workItem from="1464995669060" duration="24737000" />
+      <workItem from="1464995669060" duration="34214000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -945,11 +887,25 @@
       <option name="project" value="LOCAL" />
       <updated>1465159458200</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CREATES arreglados">
+      <created>1465160821283</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1465160821283</updated>
+    </task>
+    <task id="LOCAL-00006" summary="CREATES arreglados">
+      <created>1465161110222</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1465161110222</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25471000" />
+    <option name="totallyTimeSpent" value="34948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="-8" width="1289" height="784" extended-state="6" />
@@ -962,11 +918,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5061025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49389747" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25386494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25386494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1024,7 +980,8 @@
     <MESSAGE value="Arreglo de problemita" />
     <MESSAGE value="Cual e tu vaina" />
     <MESSAGE value="Cual e tu vaina2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cual e tu vaina2" />
+    <MESSAGE value="CREATES arreglados" />
+    <option name="LAST_COMMIT_MESSAGE" value="CREATES arreglados" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1085,14 +1042,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1104,33 +1058,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        <state relative-caret-position="289">
+          <caret line="170" column="67" selection-start-line="170" selection-start-column="67" selection-end-line="170" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1465160760043" expanded="true" signature="1335:1488" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1335:1656" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1335:1732" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1793:1876" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1937:1974" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1937:2069" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1937:2082" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1937:2083" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="1937:2145" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2206:2382" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2206:2393" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2206:2402" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2206:2442" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2206:2443" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2503:2588" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2503:2773" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="2503:2774" placeholder="CREATE TABLE... IF" />
-            <marker date="1465160760043" expanded="true" signature="3281:3353" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465160760043" expanded="true" signature="3281:3364" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465160760043" expanded="true" signature="3281:3375" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465160760043" expanded="true" signature="4628:4674" placeholder="INSERT INTO ETIQUETA... " />
+            <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
+            <element signature="method#subir#0;class#Manejador#0" expanded="false" />
+            <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
+            <element signature="method#insertaretiqueta#0;class#Manejador#0" expanded="false" />
+            <element signature="method#getEtiquetas#0;class#Manejador#0" expanded="false" />
+            <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
+            <marker date="1465170700402" expanded="true" signature="1344:1460" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1344:1554" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1344:1593" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1654:1737" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1798:1835" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1798:1930" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1798:1943" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1798:1944" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="1798:2006" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2067:2243" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2067:2254" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2067:2263" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2067:2303" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2067:2304" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2364:2464" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2364:2649" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="2364:2650" placeholder="CREATE TABLE... IF" />
+            <marker date="1465170700402" expanded="true" signature="3183:3255" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465170700402" expanded="true" signature="3183:3266" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465170700402" expanded="true" signature="3183:3277" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465170700402" expanded="true" signature="4527:4573" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465170700402" expanded="true" signature="5276:5377" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465170700402" expanded="true" signature="6298:6395" placeholder="INSERT INTO COMENTARIO... " />
+            <marker date="1465170700402" expanded="true" signature="6970:7037" placeholder="INSERT INTO ETIQUETAS... " />
+            <marker date="1465170700402" expanded="true" signature="7896:7920" placeholder="select * fro... estudiante" />
+            <marker date="1465170700402" expanded="true" signature="8892:8934" placeholder="DROP TABLE E... " />
+            <marker date="1465170700402" expanded="true" signature="8993:9014" placeholder="DROP TABLE A... " />
+            <marker date="1465170700402" expanded="true" signature="8993:9025" placeholder="DROP TABLE C... " />
+            <marker date="1465170700402" expanded="true" signature="9084:9114" placeholder="DROP TABLE A... " />
+            <marker date="1465170700402" expanded="true" signature="9173:9203" placeholder="DROP TABLE E... " />
+            <marker date="1465170700402" expanded="true" signature="9262:9291" placeholder="DROP TABLE U... " />
           </folding>
         </state>
       </provider>
