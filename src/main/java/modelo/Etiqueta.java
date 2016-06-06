@@ -8,6 +8,11 @@ public class Etiqueta {
     private int id;
     private String etigueta;
 
+    public Etiqueta(int id, String etigueta) {
+        this.id = id;
+        this.etigueta = etigueta;
+    }
+
     public int getId() {
         return id;
     }

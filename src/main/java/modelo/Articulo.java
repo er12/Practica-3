@@ -15,6 +15,17 @@ public class Articulo {
     private List<Comentario> listaComentario;
     private List<Etiqueta> listaEtiqueta;
 
+
+    public Articulo(long id, String titulo, String cuerpo, Usuario autor, Date fecha, List<Comentario> listaComentario, List<Etiqueta> listaEtiqueta) {
+        this.id = id;
+        this.titulo = titulo;
+        Cuerpo = cuerpo;
+        this.autor = autor;
+        this.fecha = fecha;
+        this.listaComentario = listaComentario;
+        this.listaEtiqueta = listaEtiqueta;
+    }
+
     public void setId(long id) {
         this.id = id;
     }

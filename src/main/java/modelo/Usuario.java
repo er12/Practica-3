@@ -11,6 +11,14 @@ public class Usuario {
     private boolean administrador;
     private boolean autor;
 
+    public Usuario(String username, String nombre, String password, boolean administrador, boolean autor) {
+        this.username = username;
+        this.nombre = nombre;
+        this.password = password;
+        this.administrador = administrador;
+        this.autor = autor;
+    }
+
     public String getUsername() {
         return username;
     }

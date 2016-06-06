@@ -168,8 +168,8 @@ public class Manejador {
 
             prepareStatement.setString(1,String.valueOf(comentario.getId()));
             prepareStatement.setString(2,comentario.getComentario());
-            prepareStatement.setString(3,String.valueOf(comentario.getAutor().getNombre()));
-            prepareStatement.setString(4,String.valueOf(comentario.getArticulo()));
+            prepareStatement.setString(3,comentario.getAutor().getUsername());
+            prepareStatement.setString(4,String.valueOf(comentario.getArticulo().getId()));
 
             prepareStatement.executeUpdate();
             conn.commit();
