@@ -12,7 +12,7 @@ public class Main {
     {
         Manejador bd = new Manejador();
         //bd.eliminarTodo();
-        bd  .subir();
+        bd.subir();
         get("/", (req, res) -> "Hello World");
 
     }

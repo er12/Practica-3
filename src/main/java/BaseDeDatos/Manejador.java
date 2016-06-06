@@ -59,7 +59,7 @@ public class Manejador {
             sql = "CREATE TABLE IF NOT  EXISTS  USUARIOS( USERNAME VARCHAR(20) PRIMARY KEY," +
                     "NOMBRE VARCHAR(50)," +
                     "PASSWORD VARCHAR(20), " +
-                    "ADMINISTRATOR BOOLEAN," +
+                    "ADMINISTRADOR BOOLEAN," +
                     "AUTOR BOOLEAN)";
             stmt.executeUpdate(sql);
 
@@ -73,13 +73,13 @@ public class Manejador {
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS COMENTARIOS(ID INTEGER, COMENTARIO VARCHAR(300), " +
+            sql = "CREATE TABLE IF NOT EXISTS COMENTARIOS(ID INTEGER, COMENTARIO VARCHAR(400), " +
                     "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS ETIQUETA_COMENTARIOS(ETIQUETA INTEGER auto_increment, COMENTARIO INTEGER, " +
-                    "PRIMARY KEY (ETIQUETA,COMENTARIO)," +
-                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (COMENTARIO) REFERENCES COMENTARIOS(ID))";
+            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS_ARTICULOS(ETIQUETA INTEGER auto_increment, ARTICULO INTEGER, " +
+                    "PRIMARY KEY (ETIQUETA,ARTICULO)," +
+                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
             //Algo diferente
             conn.commit();
@@ -216,6 +216,19 @@ public class Manejador {
                 prepareStatement.executeUpdate();
             }
 
+            sql = "INSERT INTO ETIQUETAS_ARTICULOS( ETIQUETA, ARTICULO)" +
+                    " VALUES(?, ?)";
+            for(Etiqueta et : articulo.getListaEtiqueta())
+            {
+                if(etiqViejas.contains(et))
+                    continue;
+                prepareStatement = conn.prepareStatement(sql);
+                prepareStatement.setString(1,et.getEtigueta());
+                prepareStatement.setString(2,String.valueOf(articulo.getId()));
+                prepareStatement.executeUpdate();
+            }
+
+
             conn.commit();
             conn.close();
 
@@ -226,23 +239,22 @@ public class Manejador {
 
     }
 
-    public List<Etiqueta> getEtiquetas() {
+    public List<Etiqueta> getEtiquetas()
+    {
         List<Etiqueta> etiquetas = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Pracica2", "sa", "");
         try {
             conn = cp.getConnection();
-            String query = "select * from estudiante";
+            String query = "select * from ETIQUETAS";
 
             //
             PreparedStatement prepareStatement = conn.prepareStatement(query);
             ResultSet rs = prepareStatement.executeQuery();
             while(rs.next()){
-                Etiqueta e = new Etiqueta();
-                e.setId(rs.getInt("ID"));
-                e.setEtigueta("ETIQUETA");
-                etiquetas.add(e);
+
+                etiquetas.add(new Etiqueta(rs.getInt("ID"),rs.getString("ETIQUETA")));
             }
 
         }
@@ -257,6 +269,157 @@ public class Manejador {
         }
 
         return etiquetas;
+    }
+
+    public List<Etiqueta> getEtiquetasArt(int art)
+    {
+        List<Etiqueta> etiquetas = new ArrayList<>();
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "select ETIQUETAS.ID AS ID, ETIQUETAS.ETIQUETA AS ETIQUETA from ETIQUETAS, ARTICULOS " +
+                    "WHERE ETIQUETAS.ID = ARTICULOS.ID";
+
+            //
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+
+                etiquetas.add(new Etiqueta(rs.getInt("ID"),rs.getString("ETIQUETA")));
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return etiquetas;
+    }
+
+    public List<Usuario> getUsuarios() {
+        List<Usuario> usuarios = new ArrayList<>();
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT * FROM USUARIOS";
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+                usuarios.add(new Usuario(rs.getString("USERNAME"),
+                                            rs.getString("NOMBRE"),
+                                            rs.getString("PASSWORD"),
+                                            rs.getBoolean("ADMINISTRADOR"),
+                                            rs.getBoolean("AUTOR")
+                                        )
+                );
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return usuarios;
+    }
+
+    public List<Comentario> getComentariosArt(int artID) {
+        List<Comentario> coments = new ArrayList<>();
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT COMENTARIOS.ID AS ID, COMENTARIOS.COMENTARIO AS COMENTARIO, " +
+                    "USUARIOS.USERNAME AS USERNAME , USURAIOS.NOMBRE AS NOMBRE " +
+                    "FROM ARTICULOS, COMENTARIOS, USUARIOS " +
+                    "WHERE ? = COMENTARIOS.ARTICULO " +
+                    "AND USUARIOS.USERNAME = COMENTARIOS.AUTOR";
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setString(1,String.valueOf(artID));
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+                coments.add(new Comentario(rs.getInt("ID"),
+                                            rs.getString("COMENTARIO"),
+                                            new Usuario(rs.getString("USERNAME"),
+                                                rs.getString("NOMBRE"),null,false,false),
+                                            null
+                            )
+                );
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return coments;
+    }
+
+    public List<Articulo> getArticulos() {
+        List<Articulo> articulos = new ArrayList<>();
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT ID, TITULO, CUERPO, " +
+                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
+                    "FROM ARTICULOS, USUARIOS " +
+                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME" ;
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+                articulos.add(new Articulo(
+                        rs.getInt("ID"),
+                        rs.getString("TITULO"),
+                        rs.getString("CUERPO"),
+                        new Usuario(rs.getString("USERNAME"),
+                                rs.getString("NOMBRE"),null,false,false),
+                        rs.getDate("FECHA"),
+                        getComentariosArt(rs.getInt("ID")),
+                        getEtiquetasArt(rs.getInt("ID"))
+                        )
+                );
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return articulos;
     }
 
     public void eliminarTodo()
