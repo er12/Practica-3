@@ -245,7 +245,7 @@ public class Manejador {
         List<Etiqueta> etiquetas = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "select * from ETIQUETAS";
@@ -277,7 +277,7 @@ public class Manejador {
         List<Etiqueta> etiquetas = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "select ETIQUETAS.ID AS ID, ETIQUETAS.ETIQUETA AS ETIQUETA from ETIQUETAS, ARTICULOS " +
@@ -309,7 +309,7 @@ public class Manejador {
         List<Usuario> usuarios = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT * FROM USUARIOS";
@@ -344,7 +344,7 @@ public class Manejador {
         List<Comentario> coments = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT COMENTARIOS.ID AS ID, COMENTARIOS.COMENTARIO AS COMENTARIO, " +
@@ -384,7 +384,7 @@ public class Manejador {
         List<Articulo> articulos = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT ID, TITULO, CUERPO, " +
@@ -427,7 +427,7 @@ public class Manejador {
 
         Connection con = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             String query = "UPDATE ARTICULO SET ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
             con = cp.getConnection();
@@ -459,7 +459,7 @@ public class Manejador {
     {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/test", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
