@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="running base de datos que cojea">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="" />
     <ignored path="Practica-3.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,72 +48,38 @@
     <favorites_list name="Practica-3" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="439" column="67" selection-start-line="439" selection-start-column="67" selection-end-line="439" selection-end-column="67" />
+            <state relative-caret-position="153">
+              <caret line="460" column="30" selection-start-line="460" selection-start-column="30" selection-end-line="460" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
                 <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
-                <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
-                <marker date="1465238909226" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238909226" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238909226" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238909226" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238909226" expanded="false" signature="4375:5065" placeholder="{...}" />
-                <marker date="1465238909226" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
-                <marker date="1465238909226" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
-                <marker date="1465238909226" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
-                <marker date="1465238909226" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
-                <marker date="1465238909226" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-                <marker date="1465238909226" expanded="false" signature="8118:8984" placeholder="{...}" />
-                <marker date="1465238909226" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
-                <marker date="1465238909226" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
-                <marker date="1465238909226" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238909226" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238909226" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238909226" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
-                <marker date="1465238909226" expanded="false" signature="11294:12834" placeholder="{...}" />
-                <marker date="1465238909226" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
-                <marker date="1465238909226" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238909226" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
-                <marker date="1465238909226" expanded="true" signature="14628:14675" placeholder="update estud... " />
-                <marker date="1465238909226" expanded="true" signature="15854:15896" placeholder="DROP TABLE E... " />
-                <marker date="1465238909226" expanded="true" signature="15955:15976" placeholder="DROP TABLE A... " />
-                <marker date="1465238909226" expanded="true" signature="15955:15987" placeholder="DROP TABLE C... " />
-                <marker date="1465238909226" expanded="true" signature="16046:16076" placeholder="DROP TABLE A... " />
-                <marker date="1465238909226" expanded="true" signature="16135:16165" placeholder="DROP TABLE E... " />
-                <marker date="1465238909226" expanded="true" signature="16224:16253" placeholder="DROP TABLE U... " />
+                <marker date="1465243503844" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
+                <marker date="1465243503844" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
+                <marker date="1465243503844" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
+                <marker date="1465243503844" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
+                <marker date="1465243503844" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
+                <marker date="1465243503844" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465243503844" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465243503844" expanded="true" signature="5399:5500" placeholder="INSERT INTO COMENTARIO... " />
+                <marker date="1465243503844" expanded="true" signature="6415:6503" placeholder="INSERT INTO ARTICULO... " />
+                <marker date="1465243503844" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
+                <marker date="1465243503844" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
+                <marker date="1465243503844" expanded="true" signature="8391:8414" placeholder="select * fro... ETIQUETAS" />
+                <marker date="1465243503844" expanded="true" signature="9310:9452" placeholder="select ETIQU... ETIQUETAS" />
+                <marker date="1465243503844" expanded="true" signature="10330:10352" placeholder="SELECT * FRO... USUARIOS" />
+                <marker date="1465243503844" expanded="true" signature="11555:11890" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465243503844" expanded="true" signature="13134:13366" placeholder="SELECT ID, T... ARTICULOS" />
+                <marker date="1465243503844" expanded="true" signature="14585:14651" placeholder="UPDATE ARTIC... " />
+                <marker date="1465243503844" expanded="true" signature="15826:15868" placeholder="DROP TABLE I... " />
+                <marker date="1465243503844" expanded="true" signature="15927:15959" placeholder="DROP TABLE I... " />
+                <marker date="1465243503844" expanded="true" signature="16018:16048" placeholder="DROP TABLE I... " />
+                <marker date="1465243503844" expanded="true" signature="16107:16137" placeholder="DROP TABLE I... " />
+                <marker date="1465243503844" expanded="true" signature="16196:16225" placeholder="DROP TABLE I... " />
               </folding>
             </state>
           </provider>
@@ -124,7 +88,7 @@
       <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="442">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -134,7 +98,7 @@
       <file leaf-file-name="Articulo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
+            <state relative-caret-position="85">
               <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding />
             </state>
@@ -144,7 +108,7 @@
       <file leaf-file-name="Comentario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Comentario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="187">
               <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
               <folding />
             </state>
@@ -475,10 +439,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="85" />
-    <option name="y" value="-8" />
-    <option name="width" value="1289" />
-    <option name="height" value="784" />
+    <option name="x" value="94" />
+    <option name="y" value="1" />
+    <option name="width" value="1271" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -505,8 +469,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -633,7 +598,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -818,6 +782,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -983,6 +948,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1022,6 +993,7 @@
       <updated>1464980070945</updated>
       <workItem from="1464980077452" duration="734000" />
       <workItem from="1464995669060" duration="47083000" />
+      <workItem from="1465242972665" duration="816000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -1100,41 +1072,48 @@
       <option name="project" value="LOCAL" />
       <updated>1465239205350</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit por rebase&#10;">
+      <created>1465243545148</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1465243545148</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47817000" />
+    <option name="totallyTimeSpent" value="48633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="-8" width="1289" height="784" extended-state="6" />
-    <editor active="false" />
+    <frame x="94" y="1" width="1271" height="766" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5061025" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.49389747" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328594" sideWeight="0.49389747" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25386494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25846407" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1185,7 +1164,8 @@
     <MESSAGE value="Base de datos 95%" />
     <MESSAGE value="Haciendo Updates" />
     <MESSAGE value="running base de datos que cojea" />
-    <option name="LAST_COMMIT_MESSAGE" value="running base de datos que cojea" />
+    <MESSAGE value="commit por rebase&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit por rebase&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1198,11 +1178,95 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
+            <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
+            <marker date="1465243503844" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465243503844" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465243503844" expanded="true" signature="5399:5500" placeholder="INSERT INTO COMENTARIO... " />
+            <marker date="1465243503844" expanded="true" signature="6415:6503" placeholder="INSERT INTO ARTICULO... " />
+            <marker date="1465243503844" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
+            <marker date="1465243503844" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
+            <marker date="1465243503844" expanded="true" signature="8391:8414" placeholder="select * fro... ETIQUETAS" />
+            <marker date="1465243503844" expanded="true" signature="9310:9452" placeholder="select ETIQU... ETIQUETAS" />
+            <marker date="1465243503844" expanded="true" signature="10330:10352" placeholder="SELECT * FRO... USUARIOS" />
+            <marker date="1465243503844" expanded="true" signature="11555:11890" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465243503844" expanded="true" signature="13134:13366" placeholder="SELECT ID, T... ARTICULOS" />
+            <marker date="1465243503844" expanded="true" signature="14585:14651" placeholder="UPDATE ARTIC... " />
+            <marker date="1465243503844" expanded="true" signature="15826:15868" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="15927:15959" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16018:16048" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16107:16137" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16196:16225" placeholder="DROP TABLE I... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Comentario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/61bf4ea3-75fc-445d-ac92-5707795bd442/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.5/8bf1630d1073be7e8a3790e54f43ada3b0604b64/spark-core-2.5-sources.jar!/spark/Route.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,7 +1305,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="442">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
@@ -1257,7 +1321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Comentario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="187">
           <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
           <folding />
         </state>
@@ -1276,7 +1340,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
+        <state relative-caret-position="85">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding />
         </state>
@@ -1284,68 +1348,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="439" column="67" selection-start-line="439" selection-start-column="67" selection-end-line="439" selection-end-column="67" />
+        <state relative-caret-position="153">
+          <caret line="460" column="30" selection-start-line="460" selection-start-column="30" selection-end-line="460" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
             <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
-            <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
-            <marker date="1465238909226" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238909226" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238909226" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238909226" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238909226" expanded="false" signature="4375:5065" placeholder="{...}" />
-            <marker date="1465238909226" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
-            <marker date="1465238909226" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
-            <marker date="1465238909226" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
-            <marker date="1465238909226" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
-            <marker date="1465238909226" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-            <marker date="1465238909226" expanded="false" signature="8118:8984" placeholder="{...}" />
-            <marker date="1465238909226" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
-            <marker date="1465238909226" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
-            <marker date="1465238909226" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238909226" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238909226" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238909226" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
-            <marker date="1465238909226" expanded="false" signature="11294:12834" placeholder="{...}" />
-            <marker date="1465238909226" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
-            <marker date="1465238909226" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238909226" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
-            <marker date="1465238909226" expanded="true" signature="14628:14675" placeholder="update estud... " />
-            <marker date="1465238909226" expanded="true" signature="15854:15896" placeholder="DROP TABLE E... " />
-            <marker date="1465238909226" expanded="true" signature="15955:15976" placeholder="DROP TABLE A... " />
-            <marker date="1465238909226" expanded="true" signature="15955:15987" placeholder="DROP TABLE C... " />
-            <marker date="1465238909226" expanded="true" signature="16046:16076" placeholder="DROP TABLE A... " />
-            <marker date="1465238909226" expanded="true" signature="16135:16165" placeholder="DROP TABLE E... " />
-            <marker date="1465238909226" expanded="true" signature="16224:16253" placeholder="DROP TABLE U... " />
+            <marker date="1465243503844" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
+            <marker date="1465243503844" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465243503844" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465243503844" expanded="true" signature="5399:5500" placeholder="INSERT INTO COMENTARIO... " />
+            <marker date="1465243503844" expanded="true" signature="6415:6503" placeholder="INSERT INTO ARTICULO... " />
+            <marker date="1465243503844" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
+            <marker date="1465243503844" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
+            <marker date="1465243503844" expanded="true" signature="8391:8414" placeholder="select * fro... ETIQUETAS" />
+            <marker date="1465243503844" expanded="true" signature="9310:9452" placeholder="select ETIQU... ETIQUETAS" />
+            <marker date="1465243503844" expanded="true" signature="10330:10352" placeholder="SELECT * FRO... USUARIOS" />
+            <marker date="1465243503844" expanded="true" signature="11555:11890" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465243503844" expanded="true" signature="13134:13366" placeholder="SELECT ID, T... ARTICULOS" />
+            <marker date="1465243503844" expanded="true" signature="14585:14651" placeholder="UPDATE ARTIC... " />
+            <marker date="1465243503844" expanded="true" signature="15826:15868" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="15927:15959" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16018:16048" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16107:16137" placeholder="DROP TABLE I... " />
+            <marker date="1465243503844" expanded="true" signature="16196:16225" placeholder="DROP TABLE I... " />
           </folding>
         </state>
       </provider>
