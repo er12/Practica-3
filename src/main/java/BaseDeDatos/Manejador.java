@@ -429,12 +429,12 @@ public class Manejador {
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Pracica2", "sa", "");
         try {
-            String query = "UPDATE ARTICULO set ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
+            String query = "UPDATE ARTICULO SET ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
             con = cp.getConnection();
             //
             PreparedStatement prepareStatement = con.prepareStatement(query);
             //Antes de ejecutar seteo los parametros.
-            prepareStatement.setInt(1, art.getId());
+            prepareStatement.setLong(1, art.getId());
             prepareStatement.setString(2, art.getTitulo());
             prepareStatement.setString(4, art.getCuerpo());
             prepareStatement.setString(3, String.valueOf(art.getFecha()));

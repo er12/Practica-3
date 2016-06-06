@@ -4,8 +4,6 @@
     <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/modelo/Articulo.java" afterPath="$PROJECT_DIR$/src/main/java/modelo/Articulo.java" />
     </list>
     <ignored path="Practica-3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,68 +55,68 @@
       <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="434" column="74" selection-start-line="434" selection-start-column="74" selection-end-line="434" selection-end-column="74" />
+            <state relative-caret-position="307">
+              <caret line="439" column="67" selection-start-line="439" selection-start-column="67" selection-end-line="439" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
                 <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
                 <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
-                <marker date="1465238377931" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
-                <marker date="1465238377931" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238377931" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238377931" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465238377931" expanded="false" signature="4375:5065" placeholder="{...}" />
-                <marker date="1465238377931" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
-                <marker date="1465238377931" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
-                <marker date="1465238377931" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
-                <marker date="1465238377931" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
-                <marker date="1465238377931" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-                <marker date="1465238377931" expanded="false" signature="8118:8984" placeholder="{...}" />
-                <marker date="1465238377931" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
-                <marker date="1465238377931" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
-                <marker date="1465238377931" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238377931" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238377931" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465238377931" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
-                <marker date="1465238377931" expanded="false" signature="11294:12834" placeholder="{...}" />
-                <marker date="1465238377931" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
-                <marker date="1465238377931" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465238377931" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
-                <marker date="1465238377931" expanded="true" signature="14625:14675" placeholder="update estud... " />
-                <marker date="1465238377931" expanded="true" signature="15853:15895" placeholder="DROP TABLE E... " />
-                <marker date="1465238377931" expanded="true" signature="15954:15975" placeholder="DROP TABLE A... " />
-                <marker date="1465238377931" expanded="true" signature="15954:15986" placeholder="DROP TABLE C... " />
-                <marker date="1465238377931" expanded="true" signature="16045:16075" placeholder="DROP TABLE A... " />
-                <marker date="1465238377931" expanded="true" signature="16134:16164" placeholder="DROP TABLE E... " />
-                <marker date="1465238377931" expanded="true" signature="16223:16252" placeholder="DROP TABLE U... " />
+                <marker date="1465238909226" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
+                <marker date="1465238909226" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465238909226" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465238909226" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
+                <marker date="1465238909226" expanded="false" signature="4375:5065" placeholder="{...}" />
+                <marker date="1465238909226" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465238909226" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
+                <marker date="1465238909226" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
+                <marker date="1465238909226" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
+                <marker date="1465238909226" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
+                <marker date="1465238909226" expanded="false" signature="8118:8984" placeholder="{...}" />
+                <marker date="1465238909226" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
+                <marker date="1465238909226" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
+                <marker date="1465238909226" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
+                <marker date="1465238909226" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
+                <marker date="1465238909226" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
+                <marker date="1465238909226" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
+                <marker date="1465238909226" expanded="false" signature="11294:12834" placeholder="{...}" />
+                <marker date="1465238909226" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
+                <marker date="1465238909226" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
+                <marker date="1465238909226" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
+                <marker date="1465238909226" expanded="true" signature="14628:14675" placeholder="update estud... " />
+                <marker date="1465238909226" expanded="true" signature="15854:15896" placeholder="DROP TABLE E... " />
+                <marker date="1465238909226" expanded="true" signature="15955:15976" placeholder="DROP TABLE A... " />
+                <marker date="1465238909226" expanded="true" signature="15955:15987" placeholder="DROP TABLE C... " />
+                <marker date="1465238909226" expanded="true" signature="16046:16076" placeholder="DROP TABLE A... " />
+                <marker date="1465238909226" expanded="true" signature="16135:16165" placeholder="DROP TABLE E... " />
+                <marker date="1465238909226" expanded="true" signature="16224:16253" placeholder="DROP TABLE U... " />
               </folding>
             </state>
           </provider>
@@ -137,8 +135,8 @@
       <file leaf-file-name="Articulo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="-231">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -1024,7 +1022,7 @@
       <option name="presentableId" value="Default" />
       <updated>1464980070945</updated>
       <workItem from="1464980077452" duration="734000" />
-      <workItem from="1464995669060" duration="45560000" />
+      <workItem from="1464995669060" duration="46328000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -1089,24 +1087,31 @@
       <option name="project" value="LOCAL" />
       <updated>1465235503748</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Haciendo Updates">
+      <created>1465238429737</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1465238429737</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46294000" />
+    <option name="totallyTimeSpent" value="47062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="-8" width="1289" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5061025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49389747" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1172,7 +1177,8 @@
     <MESSAGE value="inserts pt1" />
     <MESSAGE value="Inserts &quot;Completos&quot;" />
     <MESSAGE value="Base de datos 95%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base de datos 95%" />
+    <MESSAGE value="Haciendo Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1263,76 +1269,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="-231">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="434" column="74" selection-start-line="434" selection-start-column="74" selection-end-line="434" selection-end-column="74" />
+        <state relative-caret-position="307">
+          <caret line="439" column="67" selection-start-line="439" selection-start-column="67" selection-end-line="439" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testConection#0;class#Manejador#0" expanded="false" />
             <element signature="method#insertarUsuario#0;class#Manejador#0" expanded="false" />
             <element signature="method#eliminarTodo#0;class#Manejador#0" expanded="false" />
-            <marker date="1465238377931" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
-            <marker date="1465238377931" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238377931" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238377931" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465238377931" expanded="false" signature="4375:5065" placeholder="{...}" />
-            <marker date="1465238377931" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
-            <marker date="1465238377931" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
-            <marker date="1465238377931" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
-            <marker date="1465238377931" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
-            <marker date="1465238377931" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-            <marker date="1465238377931" expanded="false" signature="8118:8984" placeholder="{...}" />
-            <marker date="1465238377931" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
-            <marker date="1465238377931" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
-            <marker date="1465238377931" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238377931" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238377931" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465238377931" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
-            <marker date="1465238377931" expanded="false" signature="11294:12834" placeholder="{...}" />
-            <marker date="1465238377931" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
-            <marker date="1465238377931" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465238377931" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
-            <marker date="1465238377931" expanded="true" signature="14625:14675" placeholder="update estud... " />
-            <marker date="1465238377931" expanded="true" signature="15853:15895" placeholder="DROP TABLE E... " />
-            <marker date="1465238377931" expanded="true" signature="15954:15975" placeholder="DROP TABLE A... " />
-            <marker date="1465238377931" expanded="true" signature="15954:15986" placeholder="DROP TABLE C... " />
-            <marker date="1465238377931" expanded="true" signature="16045:16075" placeholder="DROP TABLE A... " />
-            <marker date="1465238377931" expanded="true" signature="16134:16164" placeholder="DROP TABLE E... " />
-            <marker date="1465238377931" expanded="true" signature="16223:16252" placeholder="DROP TABLE U... " />
+            <marker date="1465238909226" expanded="true" signature="1445:1561" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1445:1655" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1445:1694" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1755:1838" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1899:1936" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1899:2031" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1899:2044" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1899:2045" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="1899:2138" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2199:2375" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2199:2386" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2199:2395" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2199:2435" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2199:2436" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2496:2593" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2496:2772" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="2496:2773" placeholder="CREATE TABLE... IF" />
+            <marker date="1465238909226" expanded="true" signature="3306:3378" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465238909226" expanded="true" signature="3306:3389" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465238909226" expanded="true" signature="3306:3400" placeholder="INSERT INTO USUARIOS... " />
+            <marker date="1465238909226" expanded="false" signature="4375:5065" placeholder="{...}" />
+            <marker date="1465238909226" expanded="true" signature="4650:4696" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465238909226" expanded="true" signature="5399:5500" placeholder="INSERT INTO ETIQUETA... " />
+            <marker date="1465238909226" expanded="true" signature="6415:6503" placeholder="INSERT INTO COMENTARIO... " />
+            <marker date="1465238909226" expanded="true" signature="6933:7000" placeholder="INSERT INTO ETIQUETAS... " />
+            <marker date="1465238909226" expanded="true" signature="7419:7509" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
+            <marker date="1465238909226" expanded="false" signature="8118:8984" placeholder="{...}" />
+            <marker date="1465238909226" expanded="true" signature="8395:8418" placeholder="select * fro... ETIQUETAS" />
+            <marker date="1465238909226" expanded="true" signature="9318:9427" placeholder="select from ETIQUETAS" />
+            <marker date="1465238909226" expanded="true" signature="9318:9432" placeholder="select ETIQU... ETIQUETAS" />
+            <marker date="1465238909226" expanded="true" signature="9318:9447" placeholder="select ETIQU... ETIQUETAS" />
+            <marker date="1465238909226" expanded="true" signature="9318:9460" placeholder="select ETIQU... ETIQUETAS" />
+            <marker date="1465238909226" expanded="true" signature="10342:10364" placeholder="SELECT * FRO... USURARIOS" />
+            <marker date="1465238909226" expanded="false" signature="11294:12834" placeholder="{...}" />
+            <marker date="1465238909226" expanded="true" signature="11571:11751" placeholder="SELECT * FRO... USUARIOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11773" placeholder="SELECT * FRO... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11814" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11839" placeholder="SELECT ARTIC... " />
+            <marker date="1465238909226" expanded="true" signature="11571:11868" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11888" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11889" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11901" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="11571:11906" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="13154:13309" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="13154:13319" placeholder="SELECT ID, T... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="13154:13386" placeholder="SELECT ID, T... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="13154:13388" placeholder="SELECT COMEN... ARTICULOS" />
+            <marker date="1465238909226" expanded="true" signature="14609:14675" placeholder="UPDATE ARTIC... " />
+            <marker date="1465238909226" expanded="true" signature="14628:14675" placeholder="update estud... " />
+            <marker date="1465238909226" expanded="true" signature="15854:15896" placeholder="DROP TABLE E... " />
+            <marker date="1465238909226" expanded="true" signature="15955:15976" placeholder="DROP TABLE A... " />
+            <marker date="1465238909226" expanded="true" signature="15955:15987" placeholder="DROP TABLE C... " />
+            <marker date="1465238909226" expanded="true" signature="16046:16076" placeholder="DROP TABLE A... " />
+            <marker date="1465238909226" expanded="true" signature="16135:16165" placeholder="DROP TABLE E... " />
+            <marker date="1465238909226" expanded="true" signature="16224:16253" placeholder="DROP TABLE U... " />
           </folding>
         </state>
       </provider>
