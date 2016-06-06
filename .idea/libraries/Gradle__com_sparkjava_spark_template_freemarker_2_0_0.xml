@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sparkjava:spark-template-freemarker:2.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-template-freemarker/2.0.0/ded988d0dd3813c1149ecb560a386e8db90f694f/spark-template-freemarker-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-template-freemarker/2.0.0/bce22449903c58b40f3e7f0e34fed4e337ee3949/spark-template-freemarker-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
