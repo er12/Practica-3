@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//Hay que ver ue se hace con la fechaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 public class Manejador {
 
     public void startConection()
@@ -69,7 +70,7 @@ public class Manejador {
 
 
             sql = "CREATE TABLE IF NOT EXISTS ARTICULOS(ID INTEGER PRIMARY KEY, TITULO VARCHAR(20), " +
-                    "CUERPO VARCHAR(800), AUTOR VARCHAR(20), FECHA DATE, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME))";
+                    "CUERPO VARCHAR(800), AUTOR VARCHAR(20), FECHA TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME))";
             stmt.executeUpdate(sql);
 
 
@@ -190,15 +191,15 @@ public class Manejador {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO ARTICULO(ID, TITULO, CUERPO, AUTOR, FECHA)" +
-                    " VALUES(?,?,?,?,?)";
+            String sql = "INSERT INTO ARTICULO(ID, TITULO, CUERPO, AUTOR)" +
+                    " VALUES(?,?,?,?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
             prepareStatement.setString(1,String.valueOf(articulo.getId()));
             prepareStatement.setString(2,articulo.getTitulo());
             prepareStatement.setString(3,articulo.getCuerpo());
             prepareStatement.setString(4,articulo.getAutor().getUsername());
-            prepareStatement.setString(5,articulo.getFecha().getYear()+ "-" + articulo.getFecha().getMonth()+ "-"+ articulo.getFecha().getDay());
+
 
             prepareStatement.executeUpdate();
 
@@ -420,6 +421,38 @@ public class Manejador {
         }
 
         return articulos;
+    }
+
+    public void actualizarArticulo(Articulo art){
+
+        Connection con = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Pracica2", "sa", "");
+        try {
+            String query = "UPDATE ARTICULO set ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
+            con = cp.getConnection();
+            //
+            PreparedStatement prepareStatement = con.prepareStatement(query);
+            //Antes de ejecutar seteo los parametros.
+            prepareStatement.setInt(1, art.getId());
+            prepareStatement.setString(2, art.getTitulo());
+            prepareStatement.setString(4, art.getCuerpo());
+            prepareStatement.setString(3, String.valueOf(art.getFecha()));
+            //Indica el where...
+            prepareStatement.setString(4,  String.valueOf(art.getId()));
+            //
+            prepareStatement.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally{
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     public void eliminarTodo()
