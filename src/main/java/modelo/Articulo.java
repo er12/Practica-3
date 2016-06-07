@@ -15,7 +15,10 @@ public class Articulo {
     private List<Comentario> listaComentario;
     private List<Etiqueta> listaEtiqueta;
 
-//Abrakadabra
+    public Articulo(){
+
+    }
+
     public Articulo(long id, String titulo, String cuerpo, Usuario autor, Date fecha, List<Comentario> listaComentario, List<Etiqueta> listaEtiqueta) {
         this.id = id;
         this.titulo = titulo;
