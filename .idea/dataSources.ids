@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="H2 - Practica2" uuid="61bf4ea3-75fc-445d-ac92-5707795bd442">
-    <database-info product="H2" version="1.4.192 (2016-05-26)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.192 (2016-05-26)">
-      <identifier-quote-string>&quot;</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+  <data-source name="H2 - Practica3" uuid="61bf4ea3-75fc-445d-ac92-5707795bd442">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
     <schema name="INFORMATION_SCHEMA" catalog="PRACTICA2"/>
     <schema name="PUBLIC" catalog="PRACTICA2"/>
     <table name="CATALOGS" schema="INFORMATION_SCHEMA" catalog="PRACTICA2" type="TABLE">
