@@ -100,7 +100,7 @@
             </h1>
 
             <!-- First Blog Post -->
-        <#--  <!--  <#list articulos as articulo>
+          <#list articulos as articulo>
             <h2>
                 <a href="#">${articulo.getTitulo()}</a>
             </h2>
@@ -113,7 +113,7 @@
             <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
             <hr>
-            </#list> -->
+            </#list>
 
             <h2>
                 <a href="#">Blog Post Title</a>

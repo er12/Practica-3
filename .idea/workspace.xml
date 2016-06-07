@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/BaseDeDatos/Manejador.class" afterPath="$PROJECT_DIR$/build/classes/main/BaseDeDatos/Manejador.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/modelo/Articulo.class" afterPath="$PROJECT_DIR$/build/classes/main/modelo/Articulo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/modelo/Comentario.class" afterPath="$PROJECT_DIR$/build/classes/main/modelo/Comentario.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/modelo/Etiqueta.class" afterPath="$PROJECT_DIR$/build/classes/main/modelo/Etiqueta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/modelo/Usuario.class" afterPath="$PROJECT_DIR$/build/classes/main/modelo/Usuario.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/recursos/css/blog-home.css" afterPath="$PROJECT_DIR$/build/resources/main/recursos/css/blog-home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" afterPath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css" afterPath="$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
     </list>
     <ignored path="Practica-3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+              <caret line="60" column="110" selection-start-line="60" selection-start-column="110" selection-end-line="60" selection-end-column="110" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1015,7 +1020,7 @@
       <workItem from="1465247905434" duration="387000" />
       <workItem from="1465261223421" duration="1081000" />
       <workItem from="1465262867107" duration="573000" />
-      <workItem from="1465263444019" duration="6295000" />
+      <workItem from="1465263444019" duration="5619000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -1115,18 +1120,11 @@
       <option name="project" value="LOCAL" />
       <updated>1465261667546</updated>
     </task>
-    <task id="LOCAL-00015" summary="Area de agregar articulo">
-      <created>1465270345466</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1465270345466</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57265000" />
+    <option name="totallyTimeSpent" value="56589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1213,8 +1211,7 @@
     <MESSAGE value="commit por rebase&#10;" />
     <MESSAGE value="boton y algo mas..." />
     <MESSAGE value="Constructores vacios en las clases de modelo" />
-    <MESSAGE value="Area de agregar articulo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Area de agregar articulo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constructores vacios en las clases de modelo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1668,7 +1665,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+          <caret line="60" column="110" selection-start-line="60" selection-start-column="110" selection-end-line="60" selection-end-column="110" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

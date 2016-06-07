@@ -16,6 +16,9 @@ import java.util.List;
 //Hay que ver ue se hace con la fechaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 //I'm on it pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+
+//ppppp???  quejeso?----------------------------------------------------------------------------
+
 public class Manejador {
 
     public void startConection()
@@ -28,7 +31,7 @@ public class Manejador {
 
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection("jdbc:h2:~/test");
+            conn = DriverManager.getConnection("jdbc:h2:~/Practica3","sa","");
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -38,7 +41,7 @@ public class Manejador {
 
     public void testConection() {
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         Connection conn = null;
         try {
             conn = cp.getConnection();
@@ -52,7 +55,7 @@ public class Manejador {
     public void subir() {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
@@ -67,16 +70,16 @@ public class Manejador {
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS( ID INTEGER PRIMARY KEY, ETIQUETA VARCHAR(50))";
+            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS( ID INTEGER PRIMARY KEY auto_increment, ETIQUETA VARCHAR(50))";
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS ARTICULOS(ID INTEGER PRIMARY KEY, TITULO VARCHAR(20), " +
+            sql = "CREATE TABLE IF NOT EXISTS ARTICULOS(ID INTEGER PRIMARY KEY auto_increment, TITULO VARCHAR(20), " +
                     "CUERPO VARCHAR(800), AUTOR VARCHAR(20), FECHA TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME))";
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS COMENTARIOS(ID INTEGER, COMENTARIO VARCHAR(400), " +
+            sql = "CREATE TABLE IF NOT EXISTS COMENTARIOS(ID INTEGER PRIMARY KEY auto_increment, COMENTARIO VARCHAR(400), " +
                     "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
 
@@ -97,12 +100,12 @@ public class Manejador {
     public void insertarUsuario(Usuario usuario) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO USUARIOS(USERNAME ,NOMBRE ,PASSWORD , ADMINISTRATOR, AUTOR ) VALUES(?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO USUARIOS(USERNAME ,NOMBRE ,PASSWORD , ADMINISTRADOR , AUTOR ) VALUES(?, ?, ?, ?, ?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
             String username = usuario.getUsername();
@@ -134,7 +137,7 @@ public class Manejador {
     public void insertaretiqueta(Usuario usuario) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
@@ -157,22 +160,21 @@ public class Manejador {
 
 
     }
-    public void insertarComentario(Comentario comentario) {
+    public void insertarComentario(Comentario comentario, int IDArt) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO COMENTARIO (ID , COMENTARIO , AUTOR , ARTICULO )" +
-                    " VALUES(?,?,?,?)";
+            String sql = "INSERT INTO COMENTARIO ( COMENTARIO , AUTOR , ARTICULO )" +
+                    " VALUES(?,?,?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
-            prepareStatement.setString(1,String.valueOf(comentario.getId()));
-            prepareStatement.setString(2,comentario.getComentario());
-            prepareStatement.setString(3,comentario.getAutor().getUsername());
-            prepareStatement.setString(4,String.valueOf(comentario.getArticulo().getId()));
+            prepareStatement.setString(1,comentario.getComentario());
+            prepareStatement.setString(2,comentario.getAutor().getUsername());
+            prepareStatement.setString(3,String.valueOf(IDArt));
 
             prepareStatement.executeUpdate();
             conn.commit();
@@ -188,19 +190,18 @@ public class Manejador {
     public void insertarArticulo(Articulo articulo) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Pracica2", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO ARTICULO(ID, TITULO, CUERPO, AUTOR)" +
-                    " VALUES(?,?,?,?)";
+            String sql = "INSERT INTO ARTICULOS( TITULO, CUERPO, AUTOR)" +
+                    " VALUES(?,?,?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
-            prepareStatement.setString(1,String.valueOf(articulo.getId()));
-            prepareStatement.setString(2,articulo.getTitulo());
-            prepareStatement.setString(3,articulo.getCuerpo());
-            prepareStatement.setString(4,articulo.getAutor().getUsername());
+            prepareStatement.setString(1,articulo.getTitulo());
+            prepareStatement.setString(2,articulo.getCuerpo());
+            prepareStatement.setString(3,articulo.getAutor().getUsername());
 
 
             prepareStatement.executeUpdate();
@@ -226,7 +227,7 @@ public class Manejador {
                 if(etiqViejas.contains(et))
                     continue;
                 prepareStatement = conn.prepareStatement(sql);
-                prepareStatement.setString(1,et.getEtigueta());
+                prepareStatement.setInt(1,getIdEtiqueta(et.getEtigueta()));
                 prepareStatement.setString(2,String.valueOf(articulo.getId()));
                 prepareStatement.executeUpdate();
             }
@@ -247,7 +248,7 @@ public class Manejador {
         List<Etiqueta> etiquetas = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "select * from ETIQUETAS";
@@ -274,12 +275,25 @@ public class Manejador {
         return etiquetas;
     }
 
+    public int getIdEtiqueta(String etiq)
+    {
+        List<Etiqueta> etiquetas = getEtiquetas();
+
+        for (Etiqueta e : etiquetas)
+        {
+            if ( e.getEtigueta().equals(etiq))
+                return e.getId();
+        }
+
+        return 0;
+    }
+
     public List<Etiqueta> getEtiquetasArt(int art)
     {
         List<Etiqueta> etiquetas = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "select ETIQUETAS.ID AS ID, ETIQUETAS.ETIQUETA AS ETIQUETA from ETIQUETAS, ARTICULOS " +
@@ -311,7 +325,7 @@ public class Manejador {
         List<Usuario> usuarios = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT * FROM USUARIOS";
@@ -346,7 +360,7 @@ public class Manejador {
         List<Comentario> coments = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT COMENTARIOS.ID AS ID, COMENTARIOS.COMENTARIO AS COMENTARIO, " +
@@ -386,7 +400,7 @@ public class Manejador {
         List<Articulo> articulos = new ArrayList<>();
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             String query = "SELECT ID, TITULO, CUERPO, " +
@@ -415,21 +429,74 @@ public class Manejador {
         catch (SQLException e) {
             e.printStackTrace();
         }finally {
+
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
+            return articulos;
         }
 
-        return articulos;
+
     }
+
+
+    public long getArticuloId() {
+        /*
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT ID, TITULO, CUERPO, " +
+                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
+                    "FROM ARTICULOS, USUARIOS " +
+                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME" ;
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+
+            ResultSet rs = prepareStatement.executeQuery();
+            while(rs.next()){
+                articulos.add(new Articulo(
+                                rs.getInt("ID"),
+                                rs.getString("TITULO"),
+                                rs.getString("CUERPO"),
+                                new Usuario(rs.getString("USERNAME"),
+                                        rs.getString("NOMBRE"),null,false,false),
+                                rs.getDate("FECHA"),
+                                getComentariosArt(rs.getInt("ID")),
+                                getEtiquetasArt(rs.getInt("ID"))
+                        )
+                );
+            }
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            return articulos;
+
+*/
+    return 10;
+
+
+    }
+
 
     public void actualizarArticulo(Articulo art){
 
         Connection con = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             String query = "UPDATE ARTICULO SET ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
             con = cp.getConnection();
@@ -461,7 +528,7 @@ public class Manejador {
     {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/test", "sa", "");
+                create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
