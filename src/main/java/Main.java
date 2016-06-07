@@ -27,7 +27,7 @@ public class Main {
 
         get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
-
+         //   attributes.put("articulos",bd.getArticulos());
 
 
             return new ModelAndView(attributes, "home.ftl");

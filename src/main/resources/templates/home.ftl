@@ -55,6 +55,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
+                </li>
+                <li>
                     <div class="btn-nav"><a class="btn btn-default navbar-btn" href="/login"> Entrar</a></div>
                 </li>
             </ul>
@@ -64,6 +67,25 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<!-- Area para agregar articulo -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Creando Articulo</h1><br>
+            <form>
+                <input type="text" name="titulo" placeholder="Titulo">
+                <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" placeholder="Texto..."></textarea>
+                <br>
+                <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" placeholder="Etiquetas,..."></textarea>
+                <br>
+                <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">
+            </form>
+
+        </div>
+    </div>
+</div>
+<!-- Termino de area de articulo -->
 
 <!-- Page Content -->
 <div class="container">
@@ -78,11 +100,12 @@
             </h1>
 
             <!-- First Blog Post -->
+        <#--  <!--  <#list articulos as articulo>
             <h2>
-                <a href="#">Blog Post Title</a>
+                <a href="#">${articulo.getTitulo()}</a>
             </h2>
             <p class="lead">
-                by <a href="index.php">Start Bootstrap</a>
+                by <a href="index.php">Holaaaaa</a>
             </p>
             <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
             <hr>
@@ -90,6 +113,7 @@
             <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
             <hr>
+            </#list> -->
 
             <h2>
                 <a href="#">Blog Post Title</a>
