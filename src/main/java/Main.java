@@ -39,12 +39,12 @@ public class Main {
         LE.add(new Etiqueta(0,"cool"));
 
 
-        bd.insertarArticulo(new Articulo(0,"Hola soy Francis", "BLABLABLA", new Usuario("francis","","",
+        bd.insertarArticulo(new Articulo(11,"Hola soy Francis", "BLABLABLA", new Usuario("francis","","",
                 false,false),null, null,LE));
 
 
         get("/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
+        Map<String, Object> attributes = new HashMap<>();
 
         attributes.put("articulos",bd.getArticulos());
 

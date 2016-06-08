@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Ernesto on 6/3/2016.
+ * Created by Ernesto y Francis on 6/3/2016.
  */
 public class Articulo {
     private long id;

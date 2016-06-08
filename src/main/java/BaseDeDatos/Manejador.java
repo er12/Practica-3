@@ -19,6 +19,7 @@ import java.util.List;
 
 //ppppp???  quejeso?----------------------------------------------------------------------------
 
+// :pppppppppppppp :ppppppppppppppppp that
 public class Manejador {
 
     public void startConection()
@@ -63,19 +64,24 @@ public class Manejador {
             String sql;
 
             sql = "CREATE TABLE IF NOT  EXISTS  USUARIOS( USERNAME VARCHAR(20) PRIMARY KEY," +
-                    "NOMBRE VARCHAR(50)," +
-                    "PASSWORD VARCHAR(20), " +
-                    "ADMINISTRADOR BOOLEAN," +
-                    "AUTOR BOOLEAN)";
+                                                         "NOMBRE VARCHAR(50)," +
+                                                         "PASSWORD VARCHAR(20), " +
+                                                         "ADMINISTRADOR BOOLEAN," +
+                                                         "AUTOR BOOLEAN)";
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS( ID INTEGER PRIMARY KEY auto_increment, ETIQUETA VARCHAR(50))";
+            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS( ID INTEGER PRIMARY KEY auto_increment,"+
+                                                        "ETIQUETA VARCHAR(50))";
             stmt.executeUpdate(sql);
 
 
-            sql = "CREATE TABLE IF NOT EXISTS ARTICULOS(ID INTEGER PRIMARY KEY auto_increment, TITULO VARCHAR(20), " +
-                    "CUERPO VARCHAR(800), AUTOR VARCHAR(20), FECHA TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME))";
+            sql = "CREATE TABLE IF NOT EXISTS ARTICULOS(ID INTEGER PRIMARY KEY auto_increment,"+
+                                                       "TITULO VARCHAR(20), " +
+                                                       "CUERPO VARCHAR(800),"+
+                                                       " AUTOR VARCHAR(20), "+
+                                                       " FECHA TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"+
+                                                        " FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME))";
             stmt.executeUpdate(sql);
 
 
@@ -84,8 +90,8 @@ public class Manejador {
             stmt.executeUpdate(sql);
 
             sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS_ARTICULOS(ETIQUETA INTEGER auto_increment, ARTICULO INTEGER, " +
-                    "PRIMARY KEY (ETIQUETA,ARTICULO)," +
-                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
+                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID), " +
+                    "PRIMARY KEY (ETIQUETA,ARTICULO) )";
             stmt.executeUpdate(sql);
             //Algo diferente
             conn.commit();
@@ -417,7 +423,7 @@ public class Manejador {
                         rs.getString("TITULO"),
                         rs.getString("CUERPO"),
                         new Usuario(rs.getString("USERNAME"),
-                                rs.getString("NOMBRE"),null,false,false),
+                                rs.getString("NOMBRE"),null,false,false),//fijate aqui
                         rs.getDate("FECHA"),
                         getComentariosArt(rs.getInt("ID")),
                         getEtiquetasArt(rs.getInt("ID"))
