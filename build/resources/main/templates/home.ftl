@@ -41,18 +41,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Blog.EF</a>
+            <a class="navbar-brand" href="/" style="font-size: 20px">Blog.EF</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/articulo">About</a>
-                </li>
-                <li>
-                    <a href="/login">Services</a>
-                </li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
@@ -101,20 +93,20 @@
 
             <!-- First Blog Post -->
           <#list articulos as articulo>
-            <h2>
-                <a href="#">${articulo.getTitulo()}</a>
-            </h2>
-            <p class="lead">
-                by <a href="index.php">Holaaaaa</a>
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum. </p>
-            <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <h2>
+                    <a href="/articulos?id=${articulo.getId()}">${articulo.getTitulo()}</a>
+                </h2>
+                <p class="lead">
+                    by <a href="index.php">${articulo.getAutor().getUsername()}</a>
+                </p>
+                <p><span class="glyphicon glyphicon-time"></span> Publicado en ${articulo.getFecha()}</p>
+                <hr>
+                <p id="parrafoEsp">${articulo.getCuerpo()}</p>
+                <a class="btn btn-primary" href="/articulos?id=${articulo.getId()}">Leer más <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-            <hr>
+                <hr>
             </#list>
-
+<!--
             <h2>
                 <a href="#">Blog Post Title</a>
             </h2>
@@ -140,7 +132,7 @@
             <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
             <hr>
-
+-->
         </div>
 
         <!-- Blog Sidebar Widgets Column -->
@@ -217,7 +209,16 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        var myDiv = $('#parrafoEsp');
+        if(myDiv.text().length>70)
+            myDiv.text(myDiv.text().substring(0,70)+ "...");
 
+    });
+
+</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 

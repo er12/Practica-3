@@ -30,16 +30,23 @@ public class Main {
         configuration.setClassForTemplateLoading(Main.class, "/templates");
         FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine( configuration );
 
-        bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234",true, false));
-        bd.insertarUsuario(new Usuario("francis","Ernesto Rodriguez","mmg",true,true));
 
+        //Administradores
+        bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234",true, false));
+        bd.insertarUsuario(new Usuario("francis","Francis Cáceres","mmg",true,true));
+
+        //Datos ejemplo
         ArrayList<Etiqueta> LE = new ArrayList<Etiqueta>();
         LE.add(new Etiqueta(0,"etetiguere"));
         LE.add(new Etiqueta(0,"francis"));
         LE.add(new Etiqueta(0,"cool"));
 
 
-        bd.insertarArticulo(new Articulo(11,"Hola soy Francis", "BLABLABLA", new Usuario("francis","","",
+        bd.insertarArticulo(new Articulo(11,"Hola soy Francis",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, " + //Hasta "veri" son 70 caracteres
+                        "tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus " +
+                        "eum dicta id animi corrupti debitis ipsum officiis rerum.",
+                new Usuario("francis","","",
                 false,false),null, null,LE));
 
         //-------------------------------------------Comentario Prueba
@@ -63,10 +70,13 @@ public class Main {
             return new ModelAndView(attributes, "home.ftl");
         }, freeMarkerEngine);
 
-        get("/articulo", (request, response) -> {
+        get("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
+            //System.out.println(request.queryParams("id"));
 
-
+            int id = Integer.valueOf(request.queryParams("id"));
+            attributes.put("comentarios",bd.getComentariosArt(id));
+            attributes.put("articulo",bd.getArticulo(id));
 
             return new ModelAndView(attributes, "articulo.ftl");
         }, freeMarkerEngine);

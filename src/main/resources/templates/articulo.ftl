@@ -74,17 +74,17 @@
             <!-- Blog Post -->
 
             <!-- Title -->
-            <h1>Blog Post Title</h1>
+            <h1>${articulo.getTitulo()}</h1>
 
             <!-- Author -->
             <p class="lead">
-                by <a href="#">Start Bootstrap</a>
+                by <a href="#">${articulo.getAutor().getUsername()} - ${articulo.getAutor().getNombre()}</a>
             </p>
 
             <hr>
 
             <!-- Date/Time -->
-            <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}</p>
 
             <hr>
 
@@ -94,12 +94,12 @@
             <hr>
 
             <!-- Post Content -->
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+            <p class="lead">${articulo.getCuerpo()}</p>
+          <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-
+-->
             <hr>
 
             <!-- Blog Comments -->
@@ -119,7 +119,7 @@
 
             <!-- Posted Comments -->
 
-            <!-- Comment -->
+            <!-- Comment
             <div class="media">
                 <div class="media-body">
                     <h4 class="media-heading">Start Bootstrap
@@ -129,16 +129,19 @@
                 </div>
             </div>
             <hr>
+            -->
 
             <!-- Comment -->
-            <div class="media">
-                <div class="media-body">
-                    <h4 class="media-heading">Start Bootstrap
-                        <small>August 25, 2014 at 9:30 PM</small>
-                    </h4>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            <#list comentarios as coment>
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">${coment.getAutor().getUsername()}
+                            <small>August 25, 2014 at 9:30 PM</small>
+                        </h4>
+                        ${coment.getComentario()}
+                    </div>
                 </div>
-            </div>
+            </#list>
 
         </div>
 

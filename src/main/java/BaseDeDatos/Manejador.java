@@ -203,7 +203,7 @@ public class Manejador {
 
             String sql = "INSERT INTO ARTICULOS( TITULO, CUERPO, AUTOR)" +
                     " VALUES(?,?,?)";
-            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+            PreparedStatement prepareStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 
             prepareStatement.setString(1,articulo.getTitulo());
             prepareStatement.setString(2,articulo.getCuerpo());
@@ -211,6 +211,15 @@ public class Manejador {
 
 
             prepareStatement.executeUpdate();
+            try (ResultSet generatedKeys = prepareStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    articulo.setId(generatedKeys.getLong(1));
+                }
+                else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+            }
+
 
             sql = "INSERT INTO ETIQUETAS( ETIQUETA)" +
                     " VALUES(?)";
@@ -226,15 +235,20 @@ public class Manejador {
                 prepareStatement.executeUpdate();
             }
 
-            sql = "INSERT INTO ETIQUETAS_ARTICULOS( ETIQUETA, ARTICULO)" +
-                    " VALUES(?, ?)";
+            sql = "INSERT INTO ETIQUETAS_ARTICULOS( ETIQUETA, ARTICULO) VALUES( ? , ? ) ";
+
             for(Etiqueta et : articulo.getListaEtiqueta())
             {
+
                 if(etiqViejas.contains(et))
                     continue;
+                int eDummy =getIdEtiqueta(et.getEtigueta());
+                int artDummy = (int) articulo.getId();
+
+
                 prepareStatement = conn.prepareStatement(sql);
-                prepareStatement.setInt(1,getIdEtiqueta(et.getEtigueta()));
-                prepareStatement.setString(2,String.valueOf(articulo.getId()));
+                prepareStatement.setInt(1,eDummy);
+                prepareStatement.setInt( 2, artDummy);
                 prepareStatement.executeUpdate();
             }
 
@@ -370,7 +384,7 @@ public class Manejador {
         try {
             conn = cp.getConnection();
             String query = "SELECT COMENTARIOS.ID AS ID, COMENTARIOS.COMENTARIO AS COMENTARIO, " +
-                    "USUARIOS.USERNAME AS USERNAME , USURAIOS.NOMBRE AS NOMBRE " +
+                    "USUARIOS.USERNAME AS USERNAME , USUARIOS.NOMBRE AS NOMBRE " +
                     "FROM ARTICULOS, COMENTARIOS, USUARIOS " +
                     "WHERE ? = COMENTARIOS.ARTICULO " +
                     "AND USUARIOS.USERNAME = COMENTARIOS.AUTOR";
@@ -443,6 +457,54 @@ public class Manejador {
             }
 
             return articulos;
+        }
+
+
+    }
+
+
+    public  Articulo getArticulo(int id) {
+        Articulo articulo = null;
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT ID, TITULO, CUERPO, " +
+                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
+                    "FROM ARTICULOS, USUARIOS " +
+                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME " +
+                    "AND ID = ?" ;
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setInt(1, id );
+
+            ResultSet rs = prepareStatement.executeQuery();
+            rs.next();
+                articulo = new Articulo(
+                                rs.getInt("ID"),
+                                rs.getString("TITULO"),
+                                rs.getString("CUERPO"),
+                                new Usuario(rs.getString("USERNAME"),
+                                        rs.getString("NOMBRE"),null,false,false),
+                                rs.getDate("FECHA"),
+                                getComentariosArt(rs.getInt("ID")),
+                                getEtiquetasArt(rs.getInt("ID"))
+                );
+
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            return articulo;
         }
 
 
@@ -541,7 +603,7 @@ public class Manejador {
 
             String sql;
 
-            sql = "DROP TABLE IF EXISTS ETIQUETAS_COMENTARIOS";
+            sql = "DROP TABLE IF EXISTS ETIQUETAS_ARTICULOS";
             stmt.executeUpdate(sql);
             sql = "DROP TABLE IF EXISTS COMENTARIOS";
             stmt.executeUpdate(sql);
