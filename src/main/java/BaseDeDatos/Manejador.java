@@ -89,9 +89,9 @@ public class Manejador {
                     "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS_ARTICULOS(ETIQUETA INTEGER auto_increment, ARTICULO INTEGER, " +
-                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID), " +
-                    "PRIMARY KEY (ETIQUETA,ARTICULO) )";
+            sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS_ARTICULOS(ETIQUETA INTEGER , ARTICULO INTEGER , " +
+                    "PRIMARY KEY (ETIQUETA,ARTICULO)," +
+                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
             stmt.executeUpdate(sql);
             //Algo diferente
             conn.commit();
@@ -423,7 +423,7 @@ public class Manejador {
                         rs.getString("TITULO"),
                         rs.getString("CUERPO"),
                         new Usuario(rs.getString("USERNAME"),
-                                rs.getString("NOMBRE"),null,false,false),//fijate aqui
+                                rs.getString("NOMBRE"),null,false,false),
                         rs.getDate("FECHA"),
                         getComentariosArt(rs.getInt("ID")),
                         getEtiquetasArt(rs.getInt("ID"))
