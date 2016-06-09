@@ -42,21 +42,7 @@
             <a class="navbar-brand" href="/">Blog.EF</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/articulo">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn" href="/login"> Entrar</a></div>
-                </li>
-            </ul>
-        </div>
+
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->

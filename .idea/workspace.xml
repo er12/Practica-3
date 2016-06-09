@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/BaseDeDatos/Manejador.class" afterPath="$PROJECT_DIR$/build/classes/main/BaseDeDatos/Manejador.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/recursos/css/propio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" afterPath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" afterPath="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
     </list>
     <ignored path="Practica-3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,55 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="52" column="103" selection-start-line="52" selection-start-column="103" selection-end-line="52" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jq.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-262">
-              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#3586#3596#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comentario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Comentario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Articulo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="3502">
+              <caret line="222" column="16" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -157,9 +110,53 @@
       <file leaf-file-name="validacion.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/validacion.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="108" column="50" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+            <state relative-caret-position="242">
+              <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="propio.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/css/propio.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jq.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-978">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-140">
+              <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3897#3907#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,8 +164,8 @@
       <file leaf-file-name="articulo.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="128" column="83" selection-start-line="128" selection-start-column="69" selection-end-line="128" selection-end-column="83" />
+            <state relative-caret-position="120">
+              <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -512,14 +509,15 @@
         <option value="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Articulo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/validacion.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a61de873-55f9-4f44-9c56-4fbfdef5d916/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/recursos/css/propio.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" />
       </list>
     </option>
   </component>
@@ -651,36 +649,6 @@
               <option name="myItemId" value="recursos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recursos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -701,32 +669,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modelo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -739,7 +681,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Programacion Web/Practicas/cesar/isc414p3-master/src/main/java/Main.java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Programacion Web/MicroFrameworkJava-master/MicroFrameworkJava-master/SparkBarCamp2014/build.gradle" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Project" />
@@ -1204,7 +1146,7 @@
       <workItem from="1465354434532" duration="3087000" />
       <workItem from="1465361535904" duration="35678000" />
       <workItem from="1465452579844" duration="2713000" />
-      <workItem from="1465455461686" duration="20193000" />
+      <workItem from="1465455461686" duration="27104000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -1339,11 +1281,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465470566423</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Tratando el boton de logout">
+      <created>1465476431780</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1465476431780</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118936000" />
+    <option name="totallyTimeSpent" value="125847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1435,11 +1384,12 @@
     <MESSAGE value="login" />
     <MESSAGE value="usuario mortal estable" />
     <MESSAGE value="Agregando mas trabajo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando mas trabajo" />
+    <MESSAGE value="Tratando el boton de logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratando el boton de logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1448,14 +1398,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2380">
@@ -1471,7 +1413,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1514,7 +1456,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1557,7 +1499,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1597,7 +1539,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1644,7 +1586,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1707,14 +1649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="82" column="73" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.5/8bf1630d1073be7e8a3790e54f43ada3b0604b64/spark-core-2.5-sources.jar!/spark/http/matching/Routes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1765,26 +1699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Comentario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="128" column="83" selection-start-line="128" selection-start-column="69" selection-end-line="128" selection-end-column="83" />
           <folding />
         </state>
       </provider>
@@ -1842,38 +1760,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/css/propio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/validacion.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="108" column="50" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+        <state relative-caret-position="242">
+          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="-140">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#3586#3596#0" expanded="true" />
+            <element signature="e#3897#3907#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="52" column="103" selection-start-line="52" selection-start-column="103" selection-end-line="52" selection-end-column="103" />
+        <state relative-caret-position="-978">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="480">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3502">
+          <caret line="222" column="16" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="16" />
           <folding />
         </state>
       </provider>

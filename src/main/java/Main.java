@@ -67,26 +67,36 @@ public class Main {
         get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             Session session = request.session(true);
+             Boolean usuario =session.attribute("sesion");
 
-           /* System.out.println(session.attribute("usuario").toString());
 
-
-            //String usuario = request.cookie("sesion");
-             Boolean usuario =session.attribute("usuario");
             Boolean admin =session.attribute("admin");
+            //System.out.println(" "+ session.attribute("usuario"));
+            attributes.put("sesion","false");
 
             if(admin!=null)
             {
                 if(admin)
+                {
                     attributes.put("greetings","Saludos Administardor.");
+                    attributes.put("sesion","true");
+                }
             }
             else
-            if(usuario!=null){
-                if(usuario)
-                    attributes.put("greetings","Saludos usuario mortal.");
+            {
+                if(usuario!=null){
+                    if(usuario)
+                    {
+                        attributes.put("greetings","Saludos usuario mortal.");
+                        attributes.put("sesion","true");
+                    }
+                }
+                else
+                {
+                    attributes.put("greetings","");
+                    attributes.put("estado","fuera");
+                }
             }
-            else
-                attributes.put("greetings","");*/
 
             attributes.put("articulos",bd.getArticulos());
 
@@ -157,7 +167,7 @@ public class Main {
             Map<String, Object> attributes = new HashMap<>();
             Session session=request.session(true);
 
-            if(session.attribute("usuario"))
+            if(session.attribute("sesion"))
             {
                 Usuario u= bd.getUsuario(request.queryParams("user"));
                 if(u.isAdministrador())
@@ -184,10 +194,10 @@ public class Main {
 
             if(bd.goodUsernamePassword(user,pass))
             {
-                session.attribute("usuario", true);
+                session.attribute("sesion", true);
             }
             else
-                session.attribute("usuario", false);
+                session.attribute("sesion", false);
             //response.redirect("/zonaadmin/");
 
 

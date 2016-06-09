@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-post.css" rel="stylesheet">
+    <link href="css/propio.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,9 +45,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn" href="/login"> Entrar</a></div>
-                </li>
+               <li>
+                   <div class="btn-nav"><a class="btn btn-default navbar-btn show" id="button_login" > Entrar</a></div>
+               </li>
+               <li>
+                   <div class="btn-nav"><a class="btn btn-danger navbar-btn hide" id="button_logout" > Salir</a></div>
+               </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -213,6 +217,7 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<!--<script src="js/jq.js"></script>-->
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

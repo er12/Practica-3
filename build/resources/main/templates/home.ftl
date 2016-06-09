@@ -18,6 +18,7 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-home.css" rel="stylesheet">
+    <link href="css/propio.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,11 +50,11 @@
                 <li>
                     <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
                 </li>
-                <li>
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn ui-btn-right" id="button_login" href="/login"> Entrar</a></div>
+                <li class="login">
+                    <div class="btn-nav"><a class="btn btn-default navbar-btn show" id="button_login"  href="/login"> Entrar</a></div>
                 </li>
-                <li>
-                    <div class="btn-nav"><a class="btn btn-danger navbar-btn ui-btn-right" id="button_logout" href="/login"> Salir</a></div>
+                <li class="logout">
+                    <div class="btn-nav"><a class="btn btn-danger navbar-btn hide" id="button_logout" href="/"> Salir</a></div>
                 </li>
             </ul>
 
@@ -212,7 +213,23 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-<script src="js/jq.js"></script>
+<!--<script src="js/jq.js"></script>-->
+
+<script type="text/javascript">
+   $(document).ready( function (){
+        var variable= "${sesion}";
+       prompt(variable);
+        if(variable==="true") {
+            $('.login').hide();
+            $('.logout').show();
+        }
+        else {
+            $('.login').show();
+            $('.logout').hide();
+        }
+    });
+
+</script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

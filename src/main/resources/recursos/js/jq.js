@@ -4,21 +4,43 @@ $(document).ready(function()
     if(myDiv.text().length>70)
         myDiv.text(myDiv.text().substring(0,70)+ "...");
 
-});
+    $('#button_login').click(function() {
+        if ($(this).hasClass('show')) {
+            $(this).removeClass('show');
+            $(this).addClass('hide');
+            $('#button_logout').removeClass('hide');
+            $('#button_logout').addClass('show');
+
+        }
+    });   
+    
+            $('#button_logout').click(function(){
+                if ($(this).hasClass('show')) {
+                    $(this).removeClass('show');
+                    $(this).addClass('hide');
+                    $('#button_login').removeClass('hide');
+                    $('#button_login').addClass('show');
+
+                }  
+               
+        }); 
+
+    });  
+     
+
+
 
 // hide logout button initially
-$(document).ready('pagebeforeshow', function () {
-    $('#button_logout').toggle();
+/*$('#button_logout').hide();
+
+$('#button_login').click(function() {
+    $(this).hide();
+    $('#button_logout').show();
+
 });
 
-// hide login and show logout
-$(document).on('click', '#button_login', function () {
-    $('#button_logout').addClass('ui-btn-right').toggle();
-    $(this).removeClass('ui-btn-right').toggle();
-});
+$('#button_logout').click(function() {
+    $(this).hide();
+    $('#button_login').show();
 
-// hide logout and show login
-$(document).on('click', '#button_logout', function () {
-    $('#button_login').addClass('ui-btn-right').toggle();
-    $(this).removeClass('ui-btn-right').toggle();
-});
+});*/
