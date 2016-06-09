@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-post.css" rel="stylesheet">
-    <link href="css/propio.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,11 +75,10 @@
             <p class="lead">
                 by <i>${articulo.getAutor().getUsername()} - ${articulo.getAutor().getNombre()}</i>
             </p>
-
             <hr>
 
             <!-- Date/Time -->
-            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}</p>
+            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}<a  style='margin-left: 20em; font-size: 15px;'>Editar</a><a  style='margin-left: 5em; font-size: 15px;'>Eliminar</a></p>
 
             <hr>
 

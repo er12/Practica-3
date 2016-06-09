@@ -18,7 +18,6 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-home.css" rel="stylesheet">
-    <link href="css/propio.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,10 +50,10 @@
                     <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
                 </li>
                 <li class="login">
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn show" id="button_login"  href="/login"> Entrar</a></div>
+                    <div class="btn-nav"><a class="btn btn-default navbar-btn " id="button_login"  href="/login"> Entrar</a></div>
                 </li>
                 <li class="logout">
-                    <div class="btn-nav"><a class="btn btn-danger navbar-btn hide" id="button_logout" href="/"> Salir</a></div>
+                    <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/"> Salir</a></div>
                 </li>
             </ul>
 
@@ -218,7 +217,6 @@
 <script type="text/javascript">
    $(document).ready( function (){
         var variable= "${sesion}";
-       prompt(variable);
         if(variable==="true") {
             $('.login').hide();
             $('.logout').show();
