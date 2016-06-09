@@ -33,7 +33,7 @@ public class Main {
 
 
         //Administradores
-        bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234",true, false));
+        bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234", false,true));
         bd.insertarUsuario(new Usuario("francis","Francis Cáceres","1234",true,true));
 
         //Datos ejemplo
@@ -73,14 +73,19 @@ public class Main {
             Boolean usuario =session.attribute("usuario");
             Boolean admin =session.attribute("admin");
 
-
-            if(usuario==null){
-                //parada del request, enviando un codigo.
-                //halt(401, "No tiene permisos para acceder -- Lo dice el filtro....");
-                attributes.put("greetings","");
+            if(admin!=null)
+            {
+                if(admin)
+                    attributes.put("greetings","Saludos Administardor.");
             }
             else
-                attributes.put("greetings","Saludos usuario mortal.");
+                if(usuario!=null){
+                    if(usuario)
+                        attributes.put("greetings","Saludos usuario mortal.");
+                }
+                else
+                        attributes.put("greetings","");
+
             attributes.put("articulos",bd.getArticulos());
 
 
@@ -101,8 +106,6 @@ public class Main {
         get("/login", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
 
-
-
             return new ModelAndView(attributes, "login.ftl");
         }, freeMarkerEngine);
 
@@ -113,8 +116,6 @@ public class Main {
             if(session.attribute("usuario"))
             {
                 Usuario u= bd.getUsuario(request.queryParams("user"));
-              //      response.cookie("sesion",  u.getUsername(), 360, false); //Para 10 miutos/100
-                //COOOOOOKIEEEEEE
                 if(u.isAdministrador())
                     session.attribute("admin",true);
                 attributes.put("message","Bienvenido " + u.getNombre());
