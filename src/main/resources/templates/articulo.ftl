@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/blog-post.css" rel="stylesheet">
+    <link href="css/blog-home.css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -78,7 +79,10 @@
             <hr>
 
             <!-- Date/Time -->
-            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}<a  style='margin-left: 20em; font-size: 15px;'>Editar</a><a  style='margin-left: 5em; font-size: 15px;'>Eliminar</a></p>
+            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
+                <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
+                <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}"><a href="/">Eliminar</a></button>
+            </p>
 
             <hr>
 
@@ -110,6 +114,24 @@
             </div>
 
             <hr>
+
+            <!-- Area para agregar articulo -->
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="loginmodal-container">
+                        <h1>Creando Articulo</h1><br>
+                        <form action="/" method="post">
+                            <input type="text" name="titulo" value="${articulo.getTitulo()}">
+                            <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" ></textarea>
+                            <br>
+                            <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ></textarea>
+                            <br>
+                            <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
 
             <!-- Posted Comments -->
 
@@ -157,43 +179,20 @@
             </div>
 
             <!-- Blog Categories Well -->
+
             <div class="well">
                 <h4>Blog Categories</h4>
                 <div class="row">
+                <#list etiquetas as etiqueta>
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
+                            <li style="color: #1b6d85;font-size: 15px;">${etiqueta.getEtigueta()}</li>
                         </ul>
                     </div>
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                        </ul>
-                    </div>
+                </#list>
                 </div>
                 <!-- /.row -->
             </div>
-
-            <!-- Side Widget Well -->
-            <div class="well">
-                <h4>Side Widget Well</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-            </div>
-
         </div>
 
     </div>

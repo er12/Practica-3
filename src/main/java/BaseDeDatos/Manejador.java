@@ -628,6 +628,33 @@ public class Manejador {
 
     }
 
+    public void eliminarArticulo(int id)
+    {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+
+        String query=null;
+        try {
+            conn = cp.getConnection();
+            query = "DELETE FROM ARTICULO WHERE ARTICULO.ID = ?";
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setInt(1,id);
+
+            System.out.println(id);
+            prepareStatement.executeUpdate();
+
+
+            conn.commit();
+            conn.close();
+
+        }    catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public void eliminarTodo()
     {
         Connection conn = null;
@@ -650,6 +677,7 @@ public class Manejador {
             sql = "DROP TABLE IF EXISTS USUARIOS";
             stmt.executeUpdate(sql);
             conn.commit();
+            stmt.close(); // Nuevo
             conn.close();
 
         }    catch (SQLException e) {

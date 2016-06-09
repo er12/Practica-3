@@ -12,10 +12,7 @@ import spark.ModelAndView;
 import spark.Session;
 import spark.template.freemarker.FreeMarkerEngine;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static spark.Spark.*;
 
@@ -124,12 +121,13 @@ public class Main {
 
         get("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
-            //System.out.println();
-
             int id = Integer.valueOf(request.queryParams("id"));
+
+
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("articulo",bd.getArticulo(id));
             attributes.put("id",request.queryParams("id"));
+            attributes.put("etiquetas",bd.getEtiquetasArt(id));
 
 
 
@@ -139,6 +137,9 @@ public class Main {
         post("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             String comen = request.queryParams("comentario");
+            int elim = Integer.parseInt(request.queryParams("elim"));
+            //System.out.println(elim);
+            bd.eliminarArticulo(elim); // aun no funciona
 
 
             System.out.println("id es" +request.queryParams("idComentario"));
@@ -148,7 +149,6 @@ public class Main {
 
             Comentario com = new Comentario(0,comen,bd.getUsuario("francis"),bd.getArticulo(id));
             bd.insertarComentario(com,id);
-            //System.out.println(com.getComentario());
 
             attributes.put("articulo",bd.getArticulo(id));
             attributes.put("comentarios",bd.getComentariosArt(id));
