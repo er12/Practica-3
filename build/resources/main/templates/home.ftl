@@ -50,7 +50,10 @@
                     <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
                 </li>
                 <li>
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn" href="/login"> Entrar</a></div>
+                    <div class="btn-nav"><a class="btn btn-default navbar-btn ui-btn-right" id="button_login" href="/login"> Entrar</a></div>
+                </li>
+                <li>
+                    <div class="btn-nav"><a class="btn btn-danger navbar-btn ui-btn-right" id="button_logout" href="/login"> Salir</a></div>
                 </li>
             </ul>
 
@@ -78,7 +81,7 @@
     </div>
 </div>
 <!-- Termino de area de articulo -->
-<!-- <#-- <greetings>${greetings}</greetings> -->
+<!-- <#-- <greetings>${greetings}</greetings>-->
 <!-- Page Content -->
 <div class="container">
 
@@ -209,16 +212,8 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-<script>
-    $(document).ready(function()
-    {
-        var myDiv = $('#parrafoEsp');
-        if(myDiv.text().length>70)
-            myDiv.text(myDiv.text().substring(0,70)+ "...");
+<script src="js/jq.js"></script>
 
-    });
-
-</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 

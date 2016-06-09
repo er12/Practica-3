@@ -68,25 +68,25 @@ public class Main {
             Map<String, Object> attributes = new HashMap<>();
             Session session = request.session(true);
 
-            //System.out.println(session.attribute("usuario").toString());
+           /* System.out.println(session.attribute("usuario").toString());
 
 
             //String usuario = request.cookie("sesion");
-            // Boolean usuario =session.attribute("usuario");
-            //Boolean admin =session.attribute("admin");
+             Boolean usuario =session.attribute("usuario");
+            Boolean admin =session.attribute("admin");
 
-          /*  if(admin!=null)
+            if(admin!=null)
             {
-               // if(admin)
-                 //   attributes.put("greetings","Saludos Administardor.");
+                if(admin)
+                    attributes.put("greetings","Saludos Administardor.");
             }
             else
             if(usuario!=null){
-              //  if(usuario)
-                 //   attributes.put("greetings","Saludos usuario mortal.");
+                if(usuario)
+                    attributes.put("greetings","Saludos usuario mortal.");
             }
             else
-              //  attributes.put("greetings","");*/
+                attributes.put("greetings","");*/
 
             attributes.put("articulos",bd.getArticulos());
 
@@ -139,9 +139,9 @@ public class Main {
             Comentario com = new Comentario(0,comen,bd.getUsuario("francis"),bd.getArticulo(id));
             bd.insertarComentario(com,id);
             //System.out.println(com.getComentario());
-            attributes.put("comentarios",bd.getComentariosArt(id));
 
             attributes.put("articulo",bd.getArticulo(id));
+            attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("id",id);
 
             return new ModelAndView(attributes, "articulo.ftl");

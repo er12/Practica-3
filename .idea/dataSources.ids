@@ -3,4 +3,49 @@
   <data-source name="H2 - Practica2" uuid="61bf4ea3-75fc-445d-ac92-5707795bd442">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="H2 - Practica3" uuid="a61de873-55f9-4f44-9c56-4fbfdef5d916">
+    <database-info product="H2" version="1.4.192 (2016-05-26)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.192 (2016-05-26)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PRACTICA3"/>
+    <table name="ARTICULOS" schema="PUBLIC" catalog="PRACTICA3" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzM4NUM4MkJfNTE1RF80NzlBX0I1QzJfQTE2N0YyRTk3RURDKQ==" autoIncrement="true"/>
+      <column name="TITULO" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CUERPO" sqlType="VARCHAR" precision="800" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUTOR" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FECHA" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVAoKQ=="/>
+      <primary-key name="CONSTRAINT_C" columns="ID"/>
+      <foreign-key name="CONSTRAINT_C7" columns="AUTOR" ref-table="USUARIOS" ref-schema="PUBLIC" ref-catalog="PRACTICA3" ref-columns="USERNAME" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="COMENTARIOS" schema="PUBLIC" catalog="PRACTICA3" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRjU4MzU0REZfRDEzMV80NTM2XzkyNjBfRjU2MzQwOUFBRkZBKQ==" autoIncrement="true"/>
+      <column name="COMENTARIO" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AUTOR" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ARTICULO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_A" columns="ID"/>
+      <foreign-key name="CONSTRAINT_A40" columns="ARTICULO" ref-table="ARTICULOS" ref-schema="PUBLIC" ref-catalog="PRACTICA3" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <foreign-key name="CONSTRAINT_A4" columns="AUTOR" ref-table="USUARIOS" ref-schema="PUBLIC" ref-catalog="PRACTICA3" ref-columns="USERNAME" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="ETIQUETAS" schema="PUBLIC" catalog="PRACTICA3" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfM0Y3MEIzMkJfNDA2NV80QzlDXzk3MERfNUQ5NjVEQUEyRENGKQ==" autoIncrement="true"/>
+      <column name="ETIQUETA" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_B" columns="ID"/>
+    </table>
+    <table name="ETIQUETAS_ARTICULOS" schema="PUBLIC" catalog="PRACTICA3" type="TABLE">
+      <column name="ETIQUETA" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ARTICULO" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_F" columns="ETIQUETA,ARTICULO"/>
+      <foreign-key name="CONSTRAINT_F0F" columns="ARTICULO" ref-table="ARTICULOS" ref-schema="PUBLIC" ref-catalog="PRACTICA3" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <foreign-key name="CONSTRAINT_F0" columns="ETIQUETA" ref-table="ETIQUETAS" ref-schema="PUBLIC" ref-catalog="PRACTICA3" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="USUARIOS" schema="PUBLIC" catalog="PRACTICA3" type="TABLE">
+      <column name="USERNAME" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NOMBRE" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ADMINISTRADOR" sqlType="BOOLEAN" precision="1" scale="0" nullable="true" jdbcType="16"/>
+      <column name="AUTOR" sqlType="BOOLEAN" precision="1" scale="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_3" columns="USERNAME"/>
+    </table>
+  </data-source>
 </component>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="176240512">
-    <data-source source="LOCAL" name="H2 - Practica3" uuid="61bf4ea3-75fc-445d-ac92-5707795bd442">
+  <component name="DataSourceManagerImpl" format="xml" hash="2630317086">
+    <data-source source="LOCAL" name="H2 - Practica2" uuid="61bf4ea3-75fc-445d-ac92-5707795bd442">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:~/Practica3</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="H2 - Practica3" uuid="a61de873-55f9-4f44-9c56-4fbfdef5d916">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>

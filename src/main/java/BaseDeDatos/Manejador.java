@@ -417,7 +417,8 @@ public class Manejador {
             String query = "SELECT COMENTARIOS.ID AS ID, COMENTARIOS.COMENTARIO AS COMENTARIO, " +
                     "USUARIOS.USERNAME AS USERNAME , USUARIOS.NOMBRE AS NOMBRE " +
                     "FROM ARTICULOS, COMENTARIOS, USUARIOS " +
-                    "WHERE ? = COMENTARIOS.ARTICULO " +
+                    "WHERE ? = ARTICULOS.ID " +
+                    "AND ARTICULOS.ID = COMENTARIOS.ARTICULO " +
                     "AND USUARIOS.USERNAME = COMENTARIOS.AUTOR";
 
             PreparedStatement prepareStatement = conn.prepareStatement(query);
