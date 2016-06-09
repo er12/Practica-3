@@ -84,7 +84,7 @@
                     </br>
                     <div class="wrapper">
             <span class="group-btn">
-                <a href="/validacion" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
+                <input id= "login" type="submit" class="btn btn-primary btn-md" value = "Entrar"></input>
             </span>
                     </div>
 

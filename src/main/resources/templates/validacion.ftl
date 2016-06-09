@@ -75,9 +75,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-4 col-md-3">
-
                 ${message}
-
                 </div>
 
             </div>
@@ -104,7 +102,11 @@
 <script src="js/jquery.js"></script>
 <script type="text/javascript">
     function Redirect() {
+        var variable= "${redireccionar}";
+        if(variable==="no")
         window.location="http://localhost:4567/login";
+        else
+            window.location="http://localhost:4567/";
     }
 
     setTimeout('Redirect()',2500);

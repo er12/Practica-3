@@ -26,7 +26,7 @@ public class Main {
         staticFileLocation("recursos");
         Manejador bd = new Manejador();
         bd.eliminarTodo();
-        bd.subir();
+            bd.subir();
         Configuration configuration = new Configuration();
         configuration.setClassForTemplateLoading(Main.class, "/templates");
         FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine( configuration );
@@ -34,7 +34,7 @@ public class Main {
 
         //Administradores
         bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234",true, false));
-        bd.insertarUsuario(new Usuario("francis","Francis Cáceres","mmg",true,true));
+        bd.insertarUsuario(new Usuario("francis","Francis Cáceres","1234",true,true));
 
         //Datos ejemplo
         ArrayList<Etiqueta> LE = new ArrayList<Etiqueta>();
@@ -64,16 +64,24 @@ public class Main {
 
         get("/", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
+            Session session = request.session(true);
 
-            Usuario usuario=request.session(true).attribute("usuario");
+            //System.out.println(session.attribute("usuario").toString());
+
+
+            //String usuario = request.cookie("sesion");
+            Boolean usuario =session.attribute("usuario");
+            Boolean admin =session.attribute("admin");
+
+
             if(usuario==null){
                 //parada del request, enviando un codigo.
                 //halt(401, "No tiene permisos para acceder -- Lo dice el filtro....");
                 attributes.put("greetings","");
             }
             else
-            attributes.put("greetings","Saludos");
-        attributes.put("articulos",bd.getArticulos());
+                attributes.put("greetings","Saludos usuario mortal.");
+            attributes.put("articulos",bd.getArticulos());
 
 
             return new ModelAndView(attributes, "home.ftl");
@@ -98,18 +106,25 @@ public class Main {
             return new ModelAndView(attributes, "login.ftl");
         }, freeMarkerEngine);
 
-        get("/validacion", (request, response) -> {
+        post("/validacion", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             Session session=request.session(true);
 
             if(session.attribute("usuario"))
             {
-                    response.cookie("/", request.params("usuario"), request.params("contra"), 36000, false); //Para 10 miutos
-                attributes.put("message","Bienvenido " + bd.getUsuario(request.queryParams("user")).getNombre());
+                Usuario u= bd.getUsuario(request.queryParams("user"));
+              //      response.cookie("sesion",  u.getUsername(), 360, false); //Para 10 miutos/100
+                //COOOOOOKIEEEEEE
+                if(u.isAdministrador())
+                    session.attribute("admin",true);
+                attributes.put("message","Bienvenido " + u.getNombre());
+                attributes.put("redireccionar", "si");
             }
             else
             {
                 attributes.put("message", "Username o password incorrectos.");
+                attributes.put("redireccionar", "no");
+
             }
 
             //response.redirect("/zonaadmin/");
@@ -121,6 +136,7 @@ public class Main {
 
             String user = request.queryParams("user");
             String pass = request.queryParams("pass");
+
             if(bd.goodUsernamePassword(user,pass))
             {
                 session.attribute("usuario", true);
