@@ -174,7 +174,7 @@ public class Manejador {
             conn = cp.getConnection();
             Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO COMENTARIO ( COMENTARIO , AUTOR , ARTICULO )" +
+            String sql = "INSERT INTO COMENTARIOS ( COMENTARIO , AUTOR , ARTICULO )" +
                     " VALUES(?,?,?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
@@ -221,8 +221,7 @@ public class Manejador {
             }
 
 
-            sql = "INSERT INTO ETIQUETAS( ETIQUETA)" +
-                    " VALUES(?)";
+            sql = "INSERT INTO ETIQUETAS( ETIQUETA) VALUES(?)";
 
             List<Etiqueta> etiqViejas = getEtiquetas();
 
@@ -543,39 +542,28 @@ public class Manejador {
     }
 
 
-    public long getArticuloId() {
-        /*
+    public long getArticuloId(String user,String titulo) {
+
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Practica3", "sa", "");
+
+        int id = 0;
         try {
             conn = cp.getConnection();
-            String query = "SELECT ID, TITULO, CUERPO, " +
-                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
-                    "FROM ARTICULOS, USUARIOS " +
-                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME" ;
+            String query = "SELECT ID FROM ARTICULOS WHERE ARTICULOS.AUTOR = ?  AND ARTICULOS.TITULO = ?";
 
             PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setString(1, user);
+            prepareStatement.setString(2, titulo);
 
             ResultSet rs = prepareStatement.executeQuery();
-            while(rs.next()){
-                articulos.add(new Articulo(
-                                rs.getInt("ID"),
-                                rs.getString("TITULO"),
-                                rs.getString("CUERPO"),
-                                new Usuario(rs.getString("USERNAME"),
-                                        rs.getString("NOMBRE"),null,false,false),
-                                rs.getDate("FECHA"),
-                                getComentariosArt(rs.getInt("ID")),
-                                getEtiquetasArt(rs.getInt("ID"))
-                        )
-                );
-            }
+             id = rs.getInt("ID");
 
-        }
-        catch (SQLException e) {
+
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
 
             try {
                 conn.close();
@@ -583,12 +571,9 @@ public class Manejador {
                 e.printStackTrace();
             }
 
-            return articulos;
+            return id;
 
-*/
-    return 10;
-
-
+        }
     }
 
 

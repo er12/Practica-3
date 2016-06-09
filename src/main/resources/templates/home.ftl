@@ -65,7 +65,7 @@
     <div class="modal-dialog">
         <div class="loginmodal-container">
             <h1>Creando Articulo</h1><br>
-            <form>
+            <form action="/" method="post">
                 <input type="text" name="titulo" placeholder="Titulo">
                 <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" placeholder="Texto..."></textarea>
                 <br>
@@ -78,7 +78,7 @@
     </div>
 </div>
 <!-- Termino de area de articulo -->
-<greetings>${greetings}</greetings>
+<!-- <#-- <greetings>${greetings}</greetings> -->
 <!-- Page Content -->
 <div class="container">
 
@@ -97,7 +97,7 @@
                     <a href="/articulos?id=${articulo.getId()}">${articulo.getTitulo()}</a>
                 </h2>
                 <p class="lead">
-                    by <a href="index.php">${articulo.getAutor().getUsername()}</a>
+                    by <i>${articulo.getAutor().getUsername()}</i>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Publicado en ${articulo.getFecha()}</p>
                 <hr>
@@ -197,7 +197,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
+                <p>Copyright &copy; Ernesto y Francis 2016</p>
             </div>
             <!-- /.col-lg-12 -->
         </div>

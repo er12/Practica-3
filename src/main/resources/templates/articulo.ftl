@@ -39,20 +39,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Blog.EF</a>
+            <a class="navbar-brand" href="/" style="font-size: 20px">Blog.EF</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/articulo">About</a>
-                </li>
-                <li>
-                    <a href="/login">Services</a>
-                </li>
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+           <ul class="nav navbar-nav navbar-right">
                 <li>
                     <div class="btn-nav"><a class="btn btn-default navbar-btn" href="/login"> Entrar</a></div>
                 </li>
@@ -78,7 +69,7 @@
 
             <!-- Author -->
             <p class="lead">
-                by <a href="#">${articulo.getAutor().getUsername()} - ${articulo.getAutor().getNombre()}</a>
+                by <i>${articulo.getAutor().getUsername()} - ${articulo.getAutor().getNombre()}</i>
             </p>
 
             <hr>
@@ -106,12 +97,12 @@
 
             <!-- Comments Form -->
             <div class="well">
-                <h4>Leave a Comment:</h4>
-                <form role="form">
+                <h4>Deja tu Comentario:</h4>
+                <form role="form" action="/articulos" method="post">
                     <div class="form-group">
-                        <textarea class="form-control" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        <textarea class="form-control" name="comentario" rows="3"></textarea>
+                    </div><input type="hidden" name="idComentario" value="${id}">
+                    <input type="submit" class="btn btn-primary" value = "Comentar!"></input>
                 </form>
             </div>
 
@@ -211,7 +202,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
+                <p>Copyright &copy; Ernesto y Francis 2016</p>
             </div>
         </div>
         <!-- /.row -->
