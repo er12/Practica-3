@@ -75,21 +75,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-4 col-md-3">
-                <form method="post" action="/validacion">
-                <div class="form-login">
-                    <h4>Bienvenido!</h4>
-                    <input type="text" id="userName" name="user" class="form-control input-sm chat-input" placeholder="Usuario" />
-                    </br>
-                    <input type="password" id="userPassword" name = "pass" class="form-control input-sm chat-input" placeholder="Contraseña" />
-                    </br>
-                    <div class="wrapper">
-            <span class="group-btn">
-                <a href="/validacion" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
-            </span>
-                    </div>
+
+                ${message}
 
                 </div>
-                </form>
+
             </div>
         </div>
     </div>
@@ -112,7 +102,13 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<script type="text/javascript">
+    function Redirect() {
+        window.location="http://localhost:4567/login";
+    }
 
+    setTimeout('Redirect()',2500);
+</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 

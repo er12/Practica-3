@@ -341,6 +341,38 @@ public class Manejador {
         return etiquetas;
     }
 
+    public Usuario getUsuario(String user) {
+        Usuario usuario = null;
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String query = "SELECT * FROM USUARIOS WHERE USERNAME = ?";
+
+            PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setString(1,user);
+            ResultSet rs = prepareStatement.executeQuery();
+            rs.next();
+               usuario = new Usuario(rs.getString("USERNAME"),
+                                rs.getString("NOMBRE"),
+                                rs.getString("PASSWORD"),
+                                rs.getBoolean("ADMINISTRADOR"),
+                                rs.getBoolean("AUTOR"));
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return usuario;
+    }
+
     public List<Usuario> getUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
         Connection conn = null;
@@ -592,6 +624,24 @@ public class Manejador {
         }
     }
 
+    public boolean goodUsernamePassword(String username, String password)
+    {
+        for( Usuario user :getUsuarios())
+        {
+            if(user.getUsername().equals(username))
+            {
+                if(user.getPassword().equals(password))
+                {
+                    return true;
+                }
+                break;
+            }
+        }
+
+        return false;
+
+    }
+
     public void eliminarTodo()
     {
         Connection conn = null;
@@ -620,5 +670,6 @@ public class Manejador {
             e.printStackTrace();
         }
     }
+
 
 }

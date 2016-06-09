@@ -78,7 +78,7 @@
     </div>
 </div>
 <!-- Termino de area de articulo -->
-
+<greetings>${greetings}</greetings>
 <!-- Page Content -->
 <div class="container">
 
