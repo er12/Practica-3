@@ -74,15 +74,13 @@
                 <br>
                 <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" placeholder="Etiquetas,..."></textarea>
                 <br>
-                <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">
+                <input type="submit" name="crearArt" class="crearArt loginmodal-submit" value="Aceptar">
             </form>
 
         </div>
     </div>
 </div>
-<!-- Termino de area de articulo -->
-<!-- <#-- <greetings>${greetings}</greetings>-->
-<!-- Page Content -->
+
 <div class="container">
 
     <div class="row">
