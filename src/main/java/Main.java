@@ -170,6 +170,23 @@ public class Main {
             Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
             bd.insertarComentario(com,id);
 
+
+            String editarArt = request.queryParams("editarArt");
+
+            if(editarArt != null) {//Not yet
+                String titulo = request.queryParams("titulo");
+                String texto = request.queryParams("area-articulo");
+                String etiquetas = request.queryParams("area-etiqueta");
+                int idArt = Integer.parseInt(request.queryParams("idArt"));
+                ArrayList<Etiqueta> etiq = new ArrayList<Etiqueta>();
+                for (String eti : etiquetas.split(",")) {
+                    etiq.add(new Etiqueta(0, eti));
+                    // System.out.println(eti);
+                }
+                Articulo art = new Articulo(idArt, titulo, texto, bd.getUsuario(sesion.attribute("currentUser")), null, null, etiq);
+                bd.actualizarArticulo(art);
+            }
+
             attributes.put("articulo",bd.getArticulo(id));
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("id",id);

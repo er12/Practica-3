@@ -125,6 +125,8 @@
                     <div class="loginmodal-container">
                         <h1>Editando Articulo</h1><br>
                         <form action="/" method="post">
+                            <input type = "hidden" name = "editarArt" value = "true">
+                            <input type = "hidden" name = "idArt" value = ${articulo.getId()}>
                             <input type="text" name="titulo" value="${articulo.getTitulo()}">
                             <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" >${articulo.getCuerpo()}</textarea>
                             <br>
