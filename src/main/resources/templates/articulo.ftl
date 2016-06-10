@@ -111,7 +111,7 @@
                 <form role="form" action="/articulos" method="post">
                     <div class="form-group">
                         <textarea class="form-control" name="comentario" rows="3"></textarea>
-                    </div><input type="hidden" name="idComentario" value="${id}">
+                    </div><input type="hidden" name="idArticulo" value="${id}">
                     <input type="submit" class="btn btn-primary" value = "Comentar!"></input>
                 </form>
             </div>
@@ -175,7 +175,7 @@
                 <#list etiquetas as etiqueta>
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
-                            <li style="color: #1b6d85;font-size: 15px;">${etiqueta.getEtigueta()}</li>
+                            <li style="color: #1b6d85;font-size: 15px;">${etiqueta.getEtiqueta()}</li>
                         </ul>
                     </div>
                 </#list>
@@ -205,7 +205,20 @@
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <!--<script src="js/jq.js"></script>-->
+<script type="text/javascript">
+    $(document).ready( function (){
+        var variable= "${sesion}";
+        if(variable==="true") {
+            $("#button_login").hide();
+            $("#button_logout").show();
+        }
+        else {
+            $("#button_login").show();
+            $("#button_logout").hide();
+        }
+    });
 
+</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 

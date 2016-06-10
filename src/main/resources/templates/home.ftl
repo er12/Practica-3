@@ -182,12 +182,12 @@
    $(document).ready( function (){
         var variable= "${sesion}";
         if(variable==="true") {
-            $('#button_login').hide();
-            $('#button_logout').show();
+            $("#button_login").hide();
+            $("#button_logout").show();
         }
         else {
-            $('#button_login').show();
-            $('#button_logout').hide();
+            $("#button_login").show();
+            $("#button_logout").hide();
         }
     });
 

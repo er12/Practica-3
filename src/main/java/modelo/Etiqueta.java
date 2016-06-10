@@ -6,15 +6,15 @@ package modelo;
 public class Etiqueta {
 
     private int id;
-    private String etigueta;
+    private String etiqueta;
 
     public Etiqueta(){
 
     }
 
-    public Etiqueta(int id, String etigueta) {
+    public Etiqueta(int id, String etiqueta) {
         this.id = id;
-        this.etigueta = etigueta;
+        this.etiqueta = etiqueta;
     }
 
     public int getId() {
@@ -25,11 +25,11 @@ public class Etiqueta {
         this.id = id;
     }
 
-    public String getEtigueta() {
-        return etigueta;
+    public String getEtiqueta() {
+        return etiqueta;
     }
 
-    public void setEtigueta(String etigueta) {
-        this.etigueta = etigueta;
+    public void setEtiqueta(String etiqueta) {
+        this.etiqueta = etiqueta;
     }
 }

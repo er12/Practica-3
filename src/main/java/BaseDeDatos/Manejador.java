@@ -10,7 +10,6 @@ import org.h2.jdbcx.JdbcConnectionPool;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 //Hay que ver ue se hace con la fechaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -230,7 +229,7 @@ public class Manejador {
                 if(etiqViejas.contains(et))
                     continue;
                 prepareStatement = conn.prepareStatement(sql);
-                prepareStatement.setString(1,et.getEtigueta());
+                prepareStatement.setString(1,et.getEtiqueta());
                 prepareStatement.executeUpdate();
             }
 
@@ -241,7 +240,7 @@ public class Manejador {
 
                 if(etiqViejas.contains(et))
                     continue;
-                int eDummy =getIdEtiqueta(et.getEtigueta());
+                int eDummy =getIdEtiqueta(et.getEtiqueta());
                 int artDummy = (int) articulo.getId();
 
 
@@ -300,7 +299,7 @@ public class Manejador {
 
         for (Etiqueta e : etiquetas)
         {
-            if ( e.getEtigueta().equals(etiq))
+            if ( e.getEtiqueta().equals(etiq))
                 return e.getId();
         }
 

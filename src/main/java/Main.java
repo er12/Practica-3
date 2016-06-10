@@ -66,7 +66,6 @@ public class Main {
             Session session = request.session(true);
              Boolean usuario = session.attribute("sesion");
 
-
             Boolean admin =session.attribute("admin");
             //System.out.println(" "+ session.attribute("usuario"));
             attributes.put("sesion","false");
@@ -143,6 +142,34 @@ public class Main {
 
         get("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
+            //---------------------------------------------------------
+            Session session = request.session(true);
+            Boolean usuario = session.attribute("sesion");
+
+            Boolean admin =session.attribute("admin");
+            attributes.put("sesion","false");
+
+            if(admin!=null) {
+                if(admin) {
+                    attributes.put("greetings","Saludos Administardor.");
+                    attributes.put("sesion","true");
+                }
+            }
+            else {
+                if(usuario!=null){
+                    if(usuario) {
+                        attributes.put("greetings","Saludos usuario mortal.");
+                        attributes.put("sesion","true");
+                    }
+                }
+                else {
+                    attributes.put("greetings","");
+                    attributes.put("estado","fuera");
+                }
+            }
+            //-----------------------------------------------------------------------
+
+
             int id = Integer.valueOf(request.queryParams("id"));
 
 
@@ -150,8 +177,6 @@ public class Main {
             attributes.put("articulo",bd.getArticulo(id));
             attributes.put("id",request.queryParams("id"));
             attributes.put("etiquetas",bd.getEtiquetasArt(id));
-
-
 
             return new ModelAndView(attributes, "articulo.ftl");
         }, freeMarkerEngine);
@@ -163,22 +188,22 @@ public class Main {
 
 
             String comen = request.queryParams("comentario");
-            System.out.println("id es " +request.queryParams("idComentario"));
 
-            int id = Integer.parseInt(request.queryParams("idComentario"));
 
-            Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
+            int id = Integer.parseInt(request.queryParams("idArticulo"));
+            Articulo articulo = bd.getArticulo(id);
+            String usuario = sesion.attribute("currentUser");
+
+            System.out.println("id es " + id+ " usuario = " + usuario);
+            Comentario com = new Comentario(0,comen, new Usuario(usuario,"","",false,false),articulo);
             bd.insertarComentario(com,id);
 
-            attributes.put("articulo",bd.getArticulo(id));
+            attributes.put("articulo",articulo);
+
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("id",id);
             attributes.put("etiquetas",bd.getEtiquetasArt(id));
 
-            for(Comentario c : bd.getComentariosArt(id))
-            {
-                System.out.println(c.getComentario());
-            }
 
             return new ModelAndView(attributes, "articulo.ftl");
         }, freeMarkerEngine);
