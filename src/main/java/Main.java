@@ -64,7 +64,7 @@ public class Main {
         get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             Session session = request.session(true);
-             Boolean usuario =session.attribute("sesion");
+             Boolean usuario = session.attribute("sesion");
 
 
             Boolean admin =session.attribute("admin");
@@ -102,19 +102,41 @@ public class Main {
         }, freeMarkerEngine);
 
         post("/", (request, response) -> {
+            Session sesion = request.session(true);
+
             Map<String, Object> attributes = new HashMap<>();
-            String titulo = request.queryParams("titulo");
-            String texto = request.queryParams("area-articulo");
-            String etiquetas = request.queryParams("area-etiqueta");
-            ArrayList<Etiqueta> etiq = new ArrayList<Etiqueta>();
-            for(String eti : etiquetas.split(",")){
-                etiq.add(new Etiqueta(0,eti));
-                System.out.println(eti);
+
+            attributes.put("sesion","true");
+
+            String insertArt = request.queryParams("crearArt");
+            String elimArt = request.queryParams("eliminarArt");
+
+            if(insertArt != null) {
+                String titulo = request.queryParams("titulo");
+                String texto = request.queryParams("area-articulo");
+                String etiquetas = request.queryParams("area-etiqueta");
+                ArrayList<Etiqueta> etiq = new ArrayList<Etiqueta>();
+                for (String eti : etiquetas.split(",")) {
+                    etiq.add(new Etiqueta(0, eti));
+                   // System.out.println(eti);
+                }
+
+
+                Articulo art = new Articulo(15, titulo, texto, bd.getUsuario(sesion.attribute("currentUser")), null, null, etiq);
+                bd.insertarArticulo(art);
             }
+            else {
+                if (elimArt != null)
+                {
+                    int elim = Integer.parseInt(request.queryParams("elim"));
+
+                    //System.out.println(elim);
+                    bd.eliminarArticulo(elim);
 
 
-            Articulo art = new Articulo(15,titulo,texto,bd.getUsuario("francis"),null,null,etiq);
-            bd.insertarArticulo(art);
+                }
+
+            }
             attributes.put("articulos",bd.getArticulos());
             return new ModelAndView(attributes, "home.ftl");
         }, freeMarkerEngine);
@@ -136,23 +158,22 @@ public class Main {
 
         post("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
+            Session sesion = request.session(true);
+            attributes.put("sesion","true");
+
+
             String comen = request.queryParams("comentario");
-            int elim = Integer.parseInt(request.queryParams("elim"));
-            //System.out.println(elim);
-            bd.eliminarArticulo(elim); // aun no funciona
-
-
-            System.out.println("id es" +request.queryParams("idComentario"));
-
+            System.out.println("id es " +request.queryParams("idComentario"));
 
             int id = Integer.parseInt(request.queryParams("idComentario"));
 
-            Comentario com = new Comentario(0,comen,bd.getUsuario("francis"),bd.getArticulo(id));
+            Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
             bd.insertarComentario(com,id);
 
             attributes.put("articulo",bd.getArticulo(id));
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("id",id);
+            attributes.put("etiquetas",bd.getEtiquetasArt(id));
 
             for(Comentario c : bd.getComentariosArt(id))
             {
@@ -200,6 +221,7 @@ public class Main {
             if(bd.goodUsernamePassword(user,pass))
             {
                 session.attribute("sesion", true);
+                session.attribute("currentUser", user);
             }
             else
                 session.attribute("sesion", false);

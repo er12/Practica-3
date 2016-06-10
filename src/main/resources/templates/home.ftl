@@ -50,10 +50,10 @@
                     <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Articulo</a>
                 </li>
                 <li class="login">
-                    <div class="btn-nav"><a class="btn btn-default navbar-btn " id="button_login"  href="/login"> Entrar</a></div>
+                    <div class="btn-nav"><a class="login btn btn-default navbar-btn " id="button_login"  href="/login"> Entrar</a></div>
                 </li>
                 <li class="logout">
-                    <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/"> Salir</a></div>
+                    <div class="btn-nav"><a class="logout btn btn-danger navbar-btn " id="button_logout" href="/"> Salir</a></div>
                 </li>
             </ul>
 
@@ -70,6 +70,7 @@
             <h1>Creando Articulo</h1><br>
             <form action="/" method="post">
                 <input type="text" name="titulo" placeholder="Titulo">
+                <input type = "hidden" name = "crearArt" value = "true">
                 <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" placeholder="Texto..."></textarea>
                 <br>
                 <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" placeholder="Etiquetas,..."></textarea>
@@ -181,12 +182,12 @@
    $(document).ready( function (){
         var variable= "${sesion}";
         if(variable==="true") {
-            $('.login').hide();
-            $('.logout').show();
+            $('#button_login').hide();
+            $('#button_logout').show();
         }
         else {
-            $('.login').show();
-            $('.logout').hide();
+            $('#button_login').show();
+            $('#button_logout').hide();
         }
     });
 

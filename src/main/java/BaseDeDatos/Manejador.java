@@ -635,14 +635,27 @@ public class Manejador {
                 create("jdbc:h2:~/Practica3", "sa", "");
 
         String query=null;
+        PreparedStatement prepareStatement= null;
         try {
             conn = cp.getConnection();
-            query = "DELETE FROM ARTICULO WHERE ARTICULO.ID = ?";
 
-            PreparedStatement prepareStatement = conn.prepareStatement(query);
+
+            query = "DELETE FROM ETIQUETAS_ARTICULOS WHERE ARTICULO = ?";
+
+            prepareStatement = conn.prepareStatement(query);
             prepareStatement.setInt(1,id);
 
-            System.out.println(id);
+
+            prepareStatement.executeUpdate();
+
+
+            //-----------------------------------------------------------
+            query = "DELETE FROM ARTICULOS WHERE ID = ?";
+
+            prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setInt(1,id);
+
+
             prepareStatement.executeUpdate();
 
 

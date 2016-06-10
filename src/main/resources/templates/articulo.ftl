@@ -81,7 +81,10 @@
             <!-- Date/Time -->
             <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
                 <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
-                <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}"><a href="/">Eliminar</a></button>
+                <form action ="/" method = "post">
+            <input type = "hidden" name = "eliminarArt" value = "true">
+            <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}">Eliminar</button>
+        </form>
             </p>
 
             <hr>
@@ -92,7 +95,7 @@
             <hr>
 
             <!-- Post Content -->
-            <p class="lead">${  articulo.getCuerpo()}</p>
+            <p class="lead">${articulo.getCuerpo()}</p>
           <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
@@ -132,20 +135,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Posted Comments -->
-
-            <!-- Comment
-            <div class="media">
-                <div class="media-body">
-                    <h4 class="media-heading">Start Bootstrap
-                        <small>August 25, 2014 at 9:30 PM</small>
-                    </h4>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-            </div>
-            <hr>
-            -->
 
             <!-- Comment -->
             <#list comentarios as coment>
