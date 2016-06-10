@@ -5,11 +5,6 @@
       <secret-storage>master_key</secret-storage>
       <user-name>sa</user-name>
     </data-source>
-    <data-source name="H2 - Practica3" uuid="a61de873-55f9-4f44-9c56-4fbfdef5d916">
-      <secret-storage>master_key</secret-storage>
-      <user-name>sa</user-name>
-      <schema-pattern>PRACTICA3.PUBLIC</schema-pattern>
-      <default-schemas>PRACTICA3.PUBLIC</default-schemas>
-    </data-source>
+    <data-source name="H2 - Practica3" uuid="a61de873-55f9-4f44-9c56-4fbfdef5d916" />
   </component>
 </project>

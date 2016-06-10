@@ -154,6 +154,11 @@ public class Main {
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("id",id);
 
+            for(Comentario c : bd.getComentariosArt(id))
+            {
+                System.out.println(c.getComentario());
+            }
+
             return new ModelAndView(attributes, "articulo.ftl");
         }, freeMarkerEngine);
 
