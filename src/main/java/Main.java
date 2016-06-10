@@ -22,7 +22,7 @@ public class Main {
     {
         staticFileLocation("recursos");
         Manejador bd = new Manejador();
-        //bd.eliminarTodo();
+       // bd.eliminarTodo();
         bd.subir();
         Configuration configuration = new Configuration();
         configuration.setClassForTemplateLoading(Main.class, "/templates");
@@ -30,7 +30,7 @@ public class Main {
 
 
         //Administradores
-       // bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234", false,true));
+        //bd.insertarUsuario(new Usuario("er12","Ernesto Rodriguez","1234", false,true));
         //bd.insertarUsuario(new Usuario("francis","Francis Cáceres","1234",true,true));
 
         //Usuario francis = new Usuario("","","",false,false);

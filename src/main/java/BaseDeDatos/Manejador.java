@@ -85,12 +85,13 @@ public class Manejador {
 
 
             sql = "CREATE TABLE IF NOT EXISTS COMENTARIOS(ID INTEGER PRIMARY KEY auto_increment, COMENTARIO VARCHAR(400), " +
-                    "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
+                    "AUTOR VARCHAR(20), ARTICULO INTEGER, FOREIGN KEY (AUTOR) REFERENCES USUARIOS(USERNAME) ON DELETE CASCADE ," +
+                    " FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID) ON DELETE CASCADE)";
             stmt.executeUpdate(sql);
 
             sql = "CREATE TABLE IF NOT EXISTS ETIQUETAS_ARTICULOS(ETIQUETA INTEGER , ARTICULO INTEGER , " +
                     "PRIMARY KEY (ETIQUETA,ARTICULO)," +
-                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID), FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID))";
+                    "FOREIGN KEY (ETIQUETA) REFERENCES ETIQUETAS(ID) ON UPDATE CASCADE , FOREIGN KEY (ARTICULO) REFERENCES ARTICULOS(ID) ON DELETE CASCADE )";
             stmt.executeUpdate(sql);
             //Algo diferente
             conn.commit();
@@ -583,7 +584,7 @@ public class Manejador {
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Practica3", "sa", "");
         try {
-            String query = "UPDATE ARTICULO SET ID=?, TITULO=?, CUERPO=?, FECHA=? where ID = ?";
+            String query = "UPDATE ARTICULO SET TITULO=?, CUERPO=?, FECHA=? where ID = ?";
             con = cp.getConnection();
             //
             PreparedStatement prepareStatement = con.prepareStatement(query);
