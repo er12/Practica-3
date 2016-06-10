@@ -143,8 +143,13 @@ public class Main {
 
         get("/articulos", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
+            Session session = request.session(true);
+
+            String hay_sesion = session.attribute("sesion");
+
             int id = Integer.valueOf(request.queryParams("id"));
 
+            attributes.put("sesion", (hay_sesion==null)? "false" :hay_sesion.toString() );
 
             attributes.put("comentarios",bd.getComentariosArt(id));
             attributes.put("articulo",bd.getArticulo(id));

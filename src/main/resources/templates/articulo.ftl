@@ -131,7 +131,7 @@
                             <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" >${articulo.getCuerpo()}</textarea>
                             <br>
 
-                            <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ><#list etiquetas as etiqs>${etiqs.getEtigueta()}, </#list></textarea>
+                            <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ><#list etiquetas as etiqs>${etiqs.getEtiqueta()}, </#list></textarea>
                             <br>
                             <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">
                         </form>
