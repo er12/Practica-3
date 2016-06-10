@@ -47,10 +47,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
                <li>
-                   <div class="btn-nav"><a class="btn btn-default navbar-btn show" id="button_login" > Entrar</a></div>
+                   <div class="btn-nav"><a class="btn btn-default navbar-btn" id="button_login" href="/login" > Entrar</a></div>
                </li>
                <li>
-                   <div class="btn-nav"><a class="btn btn-danger navbar-btn hide" id="button_logout" > Salir</a></div>
+                   <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/" > Salir</a></div>
                </li>
             </ul>
         </div>
@@ -79,10 +79,11 @@
             <hr>
 
             <!-- Date/Time -->
-            <p><span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
-                <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
+            <p>
                 <form action ="/" method = "post">
+            <span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
             <input type = "hidden" name = "eliminarArt" value = "true">
+            <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
             <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}">Eliminar</button>
         </form>
             </p>
@@ -122,12 +123,13 @@
             <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                 <div class="modal-dialog">
                     <div class="loginmodal-container">
-                        <h1>Creando Articulo</h1><br>
+                        <h1>Editando Articulo</h1><br>
                         <form action="/" method="post">
                             <input type="text" name="titulo" value="${articulo.getTitulo()}">
-                            <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" ></textarea>
+                            <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" >${articulo.getCuerpo()}</textarea>
                             <br>
-                            <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ></textarea>
+
+                            <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ><#list etiquetas as etiqs>${etiqs.getEtigueta()}, </#list></textarea>
                             <br>
                             <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">
                         </form>
