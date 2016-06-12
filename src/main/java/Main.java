@@ -144,7 +144,7 @@ public static void main(String [] args)
     get("/articulos", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
         Session sesion = request.session(true);
-        attributes.put("sesion",sesion.attribute("sesion").toString());
+        attributes.put("sesion",(sesion.attribute("sesion")==null)?"false":sesion.attribute("sesion").toString());
         int id = Integer.valueOf(request.queryParams("id"));
 
 
@@ -198,10 +198,10 @@ public static void main(String [] args)
         attributes.put("id",id);
         attributes.put("etiquetas",bd.getEtiquetasArt(id));
 
-        for(Comentario c : bd.getComentariosArt(id))
+        /*for(Comentario c : bd.getComentariosArt(id))
         {
             System.out.println(c.getComentario());
-        }
+        }*/
 
         return new ModelAndView(attributes, "articulo.ftl");
     }, freeMarkerEngine);

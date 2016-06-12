@@ -217,8 +217,10 @@
             $("#button_logout").show();
         }
         else {
-            $("#button_login").show();
-            $("#button_logout").hide();
+            if(variable==="false") {
+                $("#button_login").show();
+                $("#button_logout").hide();
+            }
         }
     });
 
