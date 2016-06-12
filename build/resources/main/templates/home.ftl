@@ -103,7 +103,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Publicado en ${articulo.getFecha()}</p>
                 <hr>
-                <p id="parrafoEsp">${articulo.getCuerpo()}</p>
+                <p class="parrafoEsp">${articulo.getCuerpo()}</p>
                 <a class="btn btn-primary" href="/articulos?id=${articulo.getId()}">Leer más <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
@@ -182,12 +182,12 @@
    $(document).ready( function (){
         var variable= "${sesion}";
         if(variable==="true") {
-            $("#button_login").hide();
-            $("#button_logout").show();
+            $('.login').hide();
+            $('.logout').show();
         }
         else {
-            $("#button_login").show();
-            $("#button_logout").hide();
+            $('.login').show();
+            $('.logout').hide();
         }
     });
 
