@@ -146,7 +146,10 @@
                 <div class="media">
                     <div class="media-body">
                         <h4 class="media-heading">${coment.getAutor().getUsername()}</h4>
-                       <textarea> ${coment.getComentario()} </textarea>
+                        <div class="form-group">
+                       <textarea class="form-control" rows="2" readonly> ${coment.getComentario()} </textarea>
+                        </div>
+                        <input type="submit" class="btn btn-danger" value = "Eliminar"></input>
                     </div>
                 </div>
             </#list>
