@@ -187,7 +187,7 @@ public static void main(String [] args)
 
         int id = Integer.parseInt(request.queryParams("idArticulo"));//arregle esta parte pero nose porque no llega a guardar el comentario
 
-        Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
+        Comentario com = new Comentario(0,comen,new Usuario(sesion.attribute("currentUser"),"","",false,false),bd.getArticulo(id));
         bd.insertarComentario(com,id);//Aqui no llega no se por que!!!!!!!
 
 

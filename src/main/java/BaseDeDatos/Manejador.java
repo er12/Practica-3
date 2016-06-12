@@ -170,6 +170,28 @@ public class Manejador {
 
     }
 
+    public void eliminarUsuario(Usuario usuario) {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String sql = "DELETE FROM USUARIOS WHERE USERNAME = ? ";
+            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+
+            String username = usuario.getUsername();
+            prepareStatement.setString(1,username);
+
+            prepareStatement.executeUpdate();
+            conn.commit();
+            conn.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void insertaretiqueta(Usuario usuario) { //chequear esta, Sera por esto que no funcionan las etiquetas
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
