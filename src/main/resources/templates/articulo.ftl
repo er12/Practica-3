@@ -124,7 +124,7 @@
                 <div class="modal-dialog">
                     <div class="loginmodal-container">
                         <h1>Editando Articulo</h1><br>
-                        <form action="/" method="post">
+                        <form action="/articulos" method="post">
                             <input type = "hidden" name = "editarArt" value = "true">
                             <input type = "hidden" name = "idArt" value = ${articulo.getId()}>
                             <input type="text" name="titulo" value="${articulo.getTitulo()}">
@@ -141,16 +141,16 @@
             </div>
 
             <!-- Comment -->
+            <div class="well">
             <#list comentarios as coment>
                 <div class="media">
                     <div class="media-body">
-                        <h4 class="media-heading">${coment.getAutor().getUsername()}
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        ${coment.getComentario()}
+                        <h4 class="media-heading">${coment.getAutor().getUsername()}</h4>
+                       <textarea> ${coment.getComentario()} </textarea>
                     </div>
                 </div>
             </#list>
+            </div>
 
         </div>
 

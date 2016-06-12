@@ -12,13 +12,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//Hay que ver ue se hace con la fechaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-//I'm on it pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-
-//ppppp???  quejeso?----------------------------------------------------------------------------
-
-// :pppppppppppppp :ppppppppppppppppp that
 public class Manejador {
 
     public void startConection()
@@ -140,7 +133,44 @@ public class Manejador {
 
     }
 
-    public void insertaretiqueta(Usuario usuario) {
+    //Actualizar Usuario
+
+    public void actualizarUsuario(Usuario usuario) {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String sql = "UPDATE USUARIOS SET NOMBRE = ? ,PASSWORD = ? , ADMINISTRADOR = ? , AUTOR = ? WHERE USERNAME = ? ";
+            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+
+            String username = usuario.getUsername();
+            String nombre = usuario.getNombre();
+            String password = usuario.getPassword();
+            boolean administrador = usuario.isAdministrador();
+            boolean autor = usuario.isAutor();
+
+
+            if(username ==null || nombre ==null || password ==null )
+                return;
+
+            prepareStatement.setString(5,username);
+            prepareStatement.setString(1, nombre);
+            prepareStatement.setString(2, password);
+            prepareStatement.setString(3, String.valueOf(administrador));
+            prepareStatement.setString(4, String.valueOf(autor));
+
+            prepareStatement.executeUpdate();
+            conn.commit();
+            conn.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void insertaretiqueta(Usuario usuario) { //chequear esta, Sera por esto que no funcionan las etiquetas
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Practica3", "sa", "");
@@ -152,8 +182,9 @@ public class Manejador {
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
             String nombre= usuario.getUsername();
-            prepareStatement.setString(1,nombre);
-
+            //deberia ser prepareStatement.setString(1,ID);
+            prepareStatement.setString(1,nombre);//Se estara guardando en el ID el nombre?
+                                        //Aqui 2?
 
 
             prepareStatement.executeUpdate();
@@ -584,17 +615,15 @@ public class Manejador {
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Practica3", "sa", "");
         try {
-            String query = "UPDATE ARTICULO SET TITULO=?, CUERPO=?, FECHA=? where ID = ?";
+            String query = "UPDATE ARTICULOS SET TITULO=?, CUERPO=? where ID = ?";
             con = cp.getConnection();
             //
             PreparedStatement prepareStatement = con.prepareStatement(query);
             //Antes de ejecutar seteo los parametros.
-            prepareStatement.setLong(1, art.getId());
-            prepareStatement.setString(2, art.getTitulo());
-            prepareStatement.setString(4, art.getCuerpo());
-            prepareStatement.setString(3, String.valueOf(art.getFecha()));
+            prepareStatement.setString(1, art.getTitulo());//Esto fue cambiado para probar, aun asi no funcionanba
+            prepareStatement.setString(2, art.getCuerpo());
             //Indica el where...
-            prepareStatement.setString(4,  String.valueOf(art.getId()));
+            prepareStatement.setString(3,  String.valueOf(art.getId()));
             //
             prepareStatement.executeUpdate();
 
