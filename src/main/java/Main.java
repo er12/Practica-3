@@ -71,20 +71,25 @@ public static void main(String [] args)
         //System.out.println(" "+ session.attribute("usuario"));
         attributes.put("sesion","false");
 
-        if(admin!=null) {
-            if(admin) {
+        if(admin!=null)
+        {
+            if(admin)
+            {
                 attributes.put("greetings","Saludos Administardor.");
                 attributes.put("sesion","true");
             }
         }
-        else {
+        else
+        {
             if(usuario!=null){
-                if(usuario) {
+                if(usuario)
+                {
                     attributes.put("greetings","Saludos usuario mortal.");
                     attributes.put("sesion","true");
                 }
             }
-            else {
+            else
+            {
                 attributes.put("greetings","");
                 attributes.put("estado","fuera");
             }
@@ -125,6 +130,7 @@ public static void main(String [] args)
             {
                 int elim = Integer.parseInt(request.queryParams("elim"));
 
+                //System.out.println(elim);
                 bd.eliminarArticulo(elim);
 
 
@@ -138,7 +144,7 @@ public static void main(String [] args)
     get("/articulos", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
         Session sesion = request.session(true);
-        attributes.put("sesion",(sesion.attribute("sesion")==null)?"false":sesion.attribute("sesion").toString());
+        attributes.put("sesion",sesion.attribute("sesion").toString());
         int id = Integer.valueOf(request.queryParams("id"));
 
 
@@ -179,10 +185,10 @@ public static void main(String [] args)
         String comen = request.queryParams("comentario");
         System.out.println("id es " + request.queryParams("idArticulo") + " " + comen + sesion.attribute("currentUser"));
 
-        int id = Integer.parseInt(request.queryParams("idArticulo"));
+        int id = Integer.parseInt(request.queryParams("idArticulo"));//arregle esta parte pero nose porque no llega a guardar el comentario
 
         Comentario com = new Comentario(0,comen,new Usuario(sesion.attribute("currentUser"),"","",false,false),bd.getArticulo(id));
-        bd.insertarComentario(com,id);
+        bd.insertarComentario(com,id);//Aqui no llega no se por que!!!!!!!
 
 
 
