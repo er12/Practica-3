@@ -64,9 +64,12 @@
         <td>${user.getUsername()}</td>
         <td>${user.getNombre()}</td>
 
-            <td><input type="checkbox" name="author">Autor</td>
-            <td><input type="checkbox" name="admin">Admin</td>
-        <td><button class="btn btn-link" name="elim" value="${user.getUsername()}">Eliminar</button> </td>
+            <!--<td><input type="checkbox" name="author">Autor</td>
+            <td><input type="checkbox" name="admin">Admin</td>-->
+        <form action="/administrarUsuarios" method="post">
+            <td><button class="btn btn-link" name="elim" value="${user.getUsername()}" type="submit">Eliminar</button> </td>
+        </form>
+
 
     </tr>
     </#list>
@@ -84,7 +87,7 @@
                 <input type="text" name="user" placeholder="username">
                 <input type="text" name="nombre" placeholder="nombre">
                 <input type="text" name="pass" placeholder="contraseña">
-
+                <input type="checkbox" name="admin" value = "Admin">Admin</input>
                 <input type="submit" name="crearUser" class="crearArt loginmodal-submit" value="Aceptar">
             </form>
 

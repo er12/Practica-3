@@ -253,17 +253,24 @@ public static void main(String [] args)
     post("/administrarUsuarios", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
 
-        String user = request.queryParams("user");
-        String nombre = request.queryParams("nombre");
-        String pass = request.queryParams("pass");
+        if(request.queryParams("elim")!=null)
+        {
+            String usernam = request.queryParams("elim");
+            //System.out.println(usernam);
+            bd.eliminarUsuario(usernam);
+        }
+        else
+        {
 
+            String user = request.queryParams("user");
+            String nombre = request.queryParams("nombre");
+            String pass = request.queryParams("pass");
+            Boolean admin = (request.queryParams("admin") ==null)? false:true;
 
-        Usuario usuario = new Usuario(user,nombre,pass,false,true);
-        bd.insertarUsuario(usuario);
-
-        String usernam = request.queryParams("elim");
-        System.out.println(usernam);
-        bd.eliminarUsuario(usernam);
+            //System.out.println(request.queryParams("admin"));
+            Usuario usuario = new Usuario(user,nombre,pass,admin,true);
+            bd.insertarUsuario(usuario);
+        }
 
         attributes.put("usuarios",bd.getUsuarios());
 

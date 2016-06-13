@@ -24,6 +24,45 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--<script src="js/jq.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready( function (){
+            var variable= "${sesion}";
+
+            $(".elimComent").hide();
+            $(".editElim").hide();
+            $(".hacerComentario").hide();
+
+            $("#button_login").show();
+            $("#button_logout").hide();
+
+            if(variable==="true"){
+                console.log("dita vaina!~");
+                if ( ("${user.getUsername()}" === "${articulo.getAutor().getUsername()}") ||
+                        ("${user.isAdministrador()?c}" === "true") )
+                {
+                    $(".elimComent").show();
+                    $(".editElim").show();
+                }
+                else
+                {
+                    $(".editElim").hide();
+                }
+
+                $(".hacerComentario").show();
+
+                $("#button_login").hide();
+                $("#button_logout").show();
+            }
+        });
+
+    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
     <![endif]-->
 
 </head>
@@ -221,44 +260,6 @@
 
 </div>
 <!-- /.container -->
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!--<script src="js/jq.js"></script>-->
-<script type="text/javascript">
-    $(document).ready( function (){
-        var variable= "${sesion}";
-
-        $(".elimComent").hide();
-        $(".editElim").hide();
-        $(".hacerComentario").hide();
-
-        $("#button_login").show();
-        $("#button_logout").hide();
-
-        if(variable==="true"){
-            console.log("dita vaina!~");
-            if ( ("${user.getUsername()}" === "${articulo.getAutor().getUsername()}") ||
-            ("${user.isAdministrador()?c}" === "true") )
-            {
-                $(".elimComent").show();
-                $(".editElim").show();
-            }
-            else
-            {
-                $(".editElim").hide();
-            }
-
-            $(".hacerComentario").show();
-
-                $("#button_login").hide();
-                $("#button_logout").show();
-        }
-    });
-
-</script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 </body>
 

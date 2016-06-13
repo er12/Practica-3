@@ -509,7 +509,8 @@ public class Manejador {
             String query = "SELECT ID, TITULO, CUERPO, " +
                     "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
                     "FROM ARTICULOS, USUARIOS " +
-                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME" ;
+                    "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME " +
+                    "ORDER BY FECHA DESC" ;
 
             PreparedStatement prepareStatement = conn.prepareStatement(query);
 
