@@ -55,6 +55,9 @@
                 <li class="logout">
                     <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/"> Salir</a></div>
                 </li>
+                <li>
+                    <div class="btn-nav"><a class="btn btn-default navbar-btn" id="administrar" href="/administrarUsuarios">Administrar</a> </div>
+                </li>
             </ul>
 
         </div>

@@ -166,7 +166,7 @@ public static void main(String [] args)
         String editarArt = request.queryParams("editarArt");
         System.out.println("Esto es " + editarArt);
 
-        if(editarArt != null) {//Not yet
+        if(editarArt != null) {
             String titulo = request.queryParams("titulo");
             String texto = request.queryParams("area-articulo");
             String etiquetas = request.queryParams("area-etiqueta");
@@ -185,10 +185,10 @@ public static void main(String [] args)
         String comen = request.queryParams("comentario");
         System.out.println("id es " + request.queryParams("idArticulo") + " " + comen + sesion.attribute("currentUser"));
 
-        int id = Integer.parseInt(request.queryParams("idArticulo"));//arregle esta parte pero nose porque no llega a guardar el comentario
+        int id = Integer.parseInt(request.queryParams("idArticulo"));
 
         Comentario com = new Comentario(0,comen,new Usuario(sesion.attribute("currentUser"),"","",false,false),bd.getArticulo(id));
-        bd.insertarComentario(com,id);//Aqui no llega no se por que!!!!!!!
+        bd.insertarComentario(com,id);
 
 
 
@@ -197,11 +197,6 @@ public static void main(String [] args)
         attributes.put("comentarios",bd.getComentariosArt(id));
         attributes.put("id",id);
         attributes.put("etiquetas",bd.getEtiquetasArt(id));
-
-        /*for(Comentario c : bd.getComentariosArt(id))
-        {
-            System.out.println(c.getComentario());
-        }*/
 
         return new ModelAndView(attributes, "articulo.ftl");
     }, freeMarkerEngine);
@@ -233,6 +228,35 @@ public static void main(String [] args)
 
         //response.redirect("/zonaadmin/");
         return new ModelAndView(attributes, "validacion.ftl");
+    }, freeMarkerEngine);
+
+    get("/administrarUsuarios", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+
+
+        attributes.put("usuarios",bd.getUsuarios());
+
+        return new ModelAndView(attributes, "administrarUsuarios.ftl");
+    }, freeMarkerEngine);
+
+    post("/administrarUsuarios", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+
+        String user = request.queryParams("user");
+        String nombre = request.queryParams("nombre");
+        String pass = request.queryParams("pass");
+
+
+        Usuario usuario = new Usuario(user,nombre,pass,false,true);
+        bd.insertarUsuario(usuario);
+
+        String usernam = request.queryParams("elim");
+        System.out.println(usernam);
+        bd.eliminarUsuario(usernam);
+
+        attributes.put("usuarios",bd.getUsuarios());
+
+        return new ModelAndView(attributes, "administrarUsuarios.ftl");
     }, freeMarkerEngine);
 
     before("/validacion",(request, response) -> {

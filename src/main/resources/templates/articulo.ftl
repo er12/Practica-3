@@ -80,7 +80,7 @@
 
             <!-- Date/Time -->
             <p>
-                <form action ="/" method = "post">
+        <form action ="/" method = "post">
             <span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
             <input type = "hidden" name = "eliminarArt" value = "true">
             <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>

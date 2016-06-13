@@ -170,7 +170,7 @@ public class Manejador {
 
     }
 
-    public void eliminarUsuario(Usuario usuario) {
+    public void eliminarUsuario(String usuario) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
                 create("jdbc:h2:~/Practica3", "sa", "");
@@ -179,8 +179,7 @@ public class Manejador {
             String sql = "DELETE FROM USUARIOS WHERE USERNAME = ? ";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
 
-            String username = usuario.getUsername();
-            prepareStatement.setString(1,username);
+            prepareStatement.setString(1,usuario);
 
             prepareStatement.executeUpdate();
             conn.commit();
