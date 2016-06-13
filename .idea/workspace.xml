@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14cb8db-aa3a-470c-853b-af3427240403" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/administrarUsuarios.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/recursos/css/blog-home.css" afterPath="$PROJECT_DIR$/build/resources/main/recursos/css/blog-home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" afterPath="$PROJECT_DIR$/build/resources/main/templates/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
@@ -55,16 +59,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="jq.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="145" column="83" selection-start-line="145" selection-start-column="83" selection-end-line="145" selection-end-column="83" />
+            <state relative-caret-position="236">
+              <caret line="252" column="52" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#6076#6086#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articulo.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="administrarUsuarios.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/administrarUsuarios.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,18 +115,8 @@
       <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articulo.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="237" column="13" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+            <state relative-caret-position="-62">
+              <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -92,50 +125,48 @@
       <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="20">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Manejador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2529">
-              <caret line="545" column="119" selection-start-line="545" selection-start-column="119" selection-end-line="545" selection-end-column="119" />
+            <state relative-caret-position="249">
+              <caret line="181" column="48" selection-start-line="181" selection-start-column="48" selection-end-line="181" selection-end-column="48" />
               <folding>
-                <marker date="1465789384686" expanded="true" signature="1333:1730" placeholder="CREATE TABLE... IF" />
-                <marker date="1465789384686" expanded="true" signature="1791:1948" placeholder="CREATE TABLE... IF" />
-                <marker date="1465789384686" expanded="true" signature="2009:2535" placeholder="CREATE TABLE... IF" />
-                <marker date="1465789384686" expanded="true" signature="2596:2922" placeholder="CREATE TABLE... IF" />
-                <marker date="1465789384686" expanded="true" signature="2982:3284" placeholder="CREATE TABLE... IF" />
-                <marker date="1465789384686" expanded="true" signature="3818:3913" placeholder="INSERT INTO USUARIOS... " />
-                <marker date="1465789384686" expanded="true" signature="5137:5232" placeholder="UPDATE USUAR... " />
-                <marker date="1465789384686" expanded="true" signature="6398:6437" placeholder="DELETE FROM " />
-                <marker date="1465789384686" expanded="true" signature="7157:7253" placeholder="INSERT INTO COMENTARIOS... " />
-                <marker date="1465789384686" expanded="true" signature="8064:8148" placeholder="INSERT INTO ARTICULOS... " />
-                <marker date="1465789384686" expanded="true" signature="8881:8923" placeholder="INSERT INTO ETIQUETAS... " />
-                <marker date="1465789384686" expanded="true" signature="9342:9410" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-                <marker date="1465789384686" expanded="true" signature="10380:10403" placeholder="select * fro... ETIQUETAS" />
-                <marker date="1465789384686" expanded="true" signature="11568:11710" placeholder="select ETIQU... ETIQUETAS" />
-                <marker date="1465789384686" expanded="true" signature="12577:12618" placeholder="SELECT * FRO... USUARIOS" />
-                <marker date="1465789384686" expanded="true" signature="13720:13742" placeholder="SELECT * FRO... USUARIOS" />
-                <marker date="1465789384686" expanded="true" signature="14950:15342" placeholder="SELECT COMEN... ARTICULOS" />
-                <marker date="1465789384686" expanded="true" signature="16591:16823" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465789384686" expanded="true" signature="18118:18479" placeholder="SELECT ID, T... ARTICULOS" />
-                <marker date="1465789384686" expanded="true" signature="19880:19956" placeholder="SELECT ID FR... ARTICULOS" />
-                <marker date="1465789384686" expanded="true" signature="20740:20792" placeholder="UPDATE ARTIC... " />
-                <marker date="1465789384686" expanded="true" signature="22312:22362" placeholder="DELETE FROM " />
-                <marker date="1465789384686" expanded="true" signature="22615:22649" placeholder="DELETE FROM " />
-                <marker date="1465789384686" expanded="true" signature="23279:23319" placeholder="DROP TABLE I... " />
-                <marker date="1465789384686" expanded="true" signature="23378:23410" placeholder="DROP TABLE I... " />
-                <marker date="1465789384686" expanded="true" signature="23469:23499" placeholder="DROP TABLE I... " />
-                <marker date="1465789384686" expanded="true" signature="23558:23588" placeholder="DROP TABLE I... " />
-                <marker date="1465789384686" expanded="true" signature="23647:23676" placeholder="DROP TABLE I... " />
+                <marker date="1465777302918" expanded="true" signature="1333:1730" ph="CREATE TABLE... IF" />
+                <marker date="1465777302918" expanded="true" signature="1791:1948" ph="CREATE TABLE... IF" />
+                <marker date="1465777302918" expanded="true" signature="2009:2535" ph="CREATE TABLE... IF" />
+                <marker date="1465777302918" expanded="true" signature="2596:2922" ph="CREATE TABLE... IF" />
+                <marker date="1465777302918" expanded="true" signature="2982:3284" ph="CREATE TABLE... IF" />
+                <marker date="1465777302918" expanded="true" signature="3818:3913" ph="INSERT INTO USUARIOS... " />
+                <marker date="1465777302918" expanded="true" signature="5137:5232" ph="UPDATE USUAR... " />
+                <marker date="1465777302918" expanded="true" signature="6428:6467" ph="DELETE FROM " />
+                <marker date="1465777302918" expanded="true" signature="7175:7221" ph="INSERT INTO ETIQUETA... " />
+                <marker date="1465777302918" expanded="true" signature="8086:8182" ph="INSERT INTO COMENTARIOS... " />
+                <marker date="1465777302918" expanded="true" signature="8993:9077" ph="INSERT INTO ARTICULOS... " />
+                <marker date="1465777302918" expanded="true" signature="9810:9852" ph="INSERT INTO ETIQUETAS... " />
+                <marker date="1465777302918" expanded="true" signature="10271:10339" ph="INSERT INTO ETIQUETAS_ARTICULOS... " />
+                <marker date="1465777302918" expanded="true" signature="11309:11332" ph="select * fro... ETIQUETAS" />
+                <marker date="1465777302918" expanded="true" signature="12497:12639" ph="select ETIQU... ETIQUETAS" />
+                <marker date="1465777302918" expanded="true" signature="13506:13547" ph="SELECT * FRO... USUARIOS" />
+                <marker date="1465777302918" expanded="true" signature="14649:14671" ph="SELECT * FRO... USUARIOS" />
+                <marker date="1465777302918" expanded="true" signature="15879:16271" ph="SELECT COMEN... ARTICULOS" />
+                <marker date="1465777302918" expanded="true" signature="17520:17752" ph="SELECT ID, T... ARTICULOS" />
+                <marker date="1465777302918" expanded="true" signature="19050:19318" ph="SELECT ID, T... ARTICULOS" />
+                <marker date="1465777302918" expanded="true" signature="20679:20755" ph="SELECT ID FR... ARTICULOS" />
+                <marker date="1465777302918" expanded="true" signature="21539:21591" ph="UPDATE ARTIC... " />
+                <marker date="1465777302918" expanded="true" signature="23111:23161" ph="DELETE FROM " />
+                <marker date="1465777302918" expanded="true" signature="23414:23448" ph="DELETE FROM " />
+                <marker date="1465777302918" expanded="true" signature="24078:24118" ph="DROP TABLE I... " />
+                <marker date="1465777302918" expanded="true" signature="24177:24209" ph="DROP TABLE I... " />
+                <marker date="1465777302918" expanded="true" signature="24268:24298" ph="DROP TABLE I... " />
+                <marker date="1465777302918" expanded="true" signature="24357:24387" ph="DROP TABLE I... " />
+                <marker date="1465777302918" expanded="true" signature="24446:24475" ph="DROP TABLE I... " />
               </folding>
             </state>
           </provider>
@@ -477,7 +508,6 @@
         <option value="$PROJECT_DIR$/src/main/java/modelo/Comentario.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Etiqueta.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css" />
         <option value="$PROJECT_DIR$/src/main/java/modelo/Articulo.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a61de873-55f9-4f44-9c56-4fbfdef5d916/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
@@ -485,16 +515,19 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/validacion.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/recursos/js/jq.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/administrarUsuarios.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -504,10 +537,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="1" />
-    <option name="width" value="1195" />
-    <option name="height" value="723" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1370" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -534,16 +567,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -638,6 +671,65 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -958,7 +1050,10 @@
       <workItem from="1465590298762" duration="2808000" />
       <workItem from="1465593453936" duration="29000" />
       <workItem from="1465593542516" duration="13281000" />
-      <workItem from="1465764318674" duration="24725000" />
+      <workItem from="1465764318674" duration="2421000" />
+      <workItem from="1465767181860" duration="1079000" />
+      <workItem from="1465768296807" duration="834000" />
+      <workItem from="1465769167927" duration="6425000" />
     </task>
     <task id="LOCAL-00001" summary="Comenzando Base de datos">
       <created>1465157296589</created>
@@ -1135,46 +1230,46 @@
       <option name="project" value="LOCAL" />
       <updated>1465744370560</updated>
     </task>
-    <task id="LOCAL-00026" summary="comentario &quot;arreglado&quot;">
-      <created>1465766821338</created>
+    <task id="LOCAL-00026" summary="Boton para eliminar comentario.">
+      <created>1465767417212</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1465766821338</updated>
+      <updated>1465767417212</updated>
     </task>
     <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176125000" />
+    <option name="totallyTimeSpent" value="162159000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="1" width="1195" height="723" extended-state="0" />
+    <frame x="-8" y="-8" width="1370" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320339" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206951" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5061025" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.49389747" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2779661" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2922591" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2555066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2553517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3644068" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36434108" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1194,17 +1289,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3644068" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36434108" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320339" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206951" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.49389747" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2779661" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2922591" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2555066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2553517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1245,20 +1340,20 @@
     <MESSAGE value="Editar falta actualizar" />
     <MESSAGE value="Eliminacion de articulo en cascada" />
     <MESSAGE value="Resuelto parte de actualizacion de articulo, problema en guardar comentario. Chequear!." />
-    <MESSAGE value="comentario &quot;arreglado&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentario &quot;arreglado&quot;" />
+    <MESSAGE value="Boton para eliminar comentario." />
+    <option name="LAST_COMMIT_MESSAGE" value="Boton para eliminar comentario." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java</url>
-          <line>667</line>
+          <line>696</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1274,7 +1369,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1317,7 +1411,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1360,7 +1453,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1400,7 +1492,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1447,7 +1538,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1486,13 +1576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1535,11 +1618,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/css/propio.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/validacion.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,6 +1637,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1559,14 +1657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Articulo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1575,97 +1665,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jquery.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/css/blog-home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/recursos/js/jq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
+        <state relative-caret-position="100">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2529">
-          <caret line="545" column="119" selection-start-line="545" selection-start-column="119" selection-end-line="545" selection-end-column="119" />
-          <folding>
-            <marker date="1465789384686" expanded="true" signature="1333:1730" placeholder="CREATE TABLE... IF" />
-            <marker date="1465789384686" expanded="true" signature="1791:1948" placeholder="CREATE TABLE... IF" />
-            <marker date="1465789384686" expanded="true" signature="2009:2535" placeholder="CREATE TABLE... IF" />
-            <marker date="1465789384686" expanded="true" signature="2596:2922" placeholder="CREATE TABLE... IF" />
-            <marker date="1465789384686" expanded="true" signature="2982:3284" placeholder="CREATE TABLE... IF" />
-            <marker date="1465789384686" expanded="true" signature="3818:3913" placeholder="INSERT INTO USUARIOS... " />
-            <marker date="1465789384686" expanded="true" signature="5137:5232" placeholder="UPDATE USUAR... " />
-            <marker date="1465789384686" expanded="true" signature="6398:6437" placeholder="DELETE FROM " />
-            <marker date="1465789384686" expanded="true" signature="7157:7253" placeholder="INSERT INTO COMENTARIOS... " />
-            <marker date="1465789384686" expanded="true" signature="8064:8148" placeholder="INSERT INTO ARTICULOS... " />
-            <marker date="1465789384686" expanded="true" signature="8881:8923" placeholder="INSERT INTO ETIQUETAS... " />
-            <marker date="1465789384686" expanded="true" signature="9342:9410" placeholder="INSERT INTO ETIQUETAS_ARTICULOS... " />
-            <marker date="1465789384686" expanded="true" signature="10380:10403" placeholder="select * fro... ETIQUETAS" />
-            <marker date="1465789384686" expanded="true" signature="11568:11710" placeholder="select ETIQU... ETIQUETAS" />
-            <marker date="1465789384686" expanded="true" signature="12577:12618" placeholder="SELECT * FRO... USUARIOS" />
-            <marker date="1465789384686" expanded="true" signature="13720:13742" placeholder="SELECT * FRO... USUARIOS" />
-            <marker date="1465789384686" expanded="true" signature="14950:15342" placeholder="SELECT COMEN... ARTICULOS" />
-            <marker date="1465789384686" expanded="true" signature="16591:16823" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465789384686" expanded="true" signature="18118:18479" placeholder="SELECT ID, T... ARTICULOS" />
-            <marker date="1465789384686" expanded="true" signature="19880:19956" placeholder="SELECT ID FR... ARTICULOS" />
-            <marker date="1465789384686" expanded="true" signature="20740:20792" placeholder="UPDATE ARTIC... " />
-            <marker date="1465789384686" expanded="true" signature="22312:22362" placeholder="DELETE FROM " />
-            <marker date="1465789384686" expanded="true" signature="22615:22649" placeholder="DELETE FROM " />
-            <marker date="1465789384686" expanded="true" signature="23279:23319" placeholder="DROP TABLE I... " />
-            <marker date="1465789384686" expanded="true" signature="23378:23410" placeholder="DROP TABLE I... " />
-            <marker date="1465789384686" expanded="true" signature="23469:23499" placeholder="DROP TABLE I... " />
-            <marker date="1465789384686" expanded="true" signature="23558:23588" placeholder="DROP TABLE I... " />
-            <marker date="1465789384686" expanded="true" signature="23647:23676" placeholder="DROP TABLE I... " />
-          </folding>
+        <state relative-caret-position="-62">
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="145" column="83" selection-start-line="145" selection-start-column="83" selection-end-line="145" selection-end-column="83" />
+        <state relative-caret-position="236">
+          <caret line="252" column="52" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#6076#6086#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articulo.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="237" column="13" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+        <state relative-caret-position="140">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/administrarUsuarios.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/Manejador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="181" column="48" selection-start-line="181" selection-start-column="48" selection-end-line="181" selection-end-column="48" />
+          <folding>
+            <marker date="1465777302918" expanded="true" signature="1333:1730" ph="CREATE TABLE... IF" />
+            <marker date="1465777302918" expanded="true" signature="1791:1948" ph="CREATE TABLE... IF" />
+            <marker date="1465777302918" expanded="true" signature="2009:2535" ph="CREATE TABLE... IF" />
+            <marker date="1465777302918" expanded="true" signature="2596:2922" ph="CREATE TABLE... IF" />
+            <marker date="1465777302918" expanded="true" signature="2982:3284" ph="CREATE TABLE... IF" />
+            <marker date="1465777302918" expanded="true" signature="3818:3913" ph="INSERT INTO USUARIOS... " />
+            <marker date="1465777302918" expanded="true" signature="5137:5232" ph="UPDATE USUAR... " />
+            <marker date="1465777302918" expanded="true" signature="6428:6467" ph="DELETE FROM " />
+            <marker date="1465777302918" expanded="true" signature="7175:7221" ph="INSERT INTO ETIQUETA... " />
+            <marker date="1465777302918" expanded="true" signature="8086:8182" ph="INSERT INTO COMENTARIOS... " />
+            <marker date="1465777302918" expanded="true" signature="8993:9077" ph="INSERT INTO ARTICULOS... " />
+            <marker date="1465777302918" expanded="true" signature="9810:9852" ph="INSERT INTO ETIQUETAS... " />
+            <marker date="1465777302918" expanded="true" signature="10271:10339" ph="INSERT INTO ETIQUETAS_ARTICULOS... " />
+            <marker date="1465777302918" expanded="true" signature="11309:11332" ph="select * fro... ETIQUETAS" />
+            <marker date="1465777302918" expanded="true" signature="12497:12639" ph="select ETIQU... ETIQUETAS" />
+            <marker date="1465777302918" expanded="true" signature="13506:13547" ph="SELECT * FRO... USUARIOS" />
+            <marker date="1465777302918" expanded="true" signature="14649:14671" ph="SELECT * FRO... USUARIOS" />
+            <marker date="1465777302918" expanded="true" signature="15879:16271" ph="SELECT COMEN... ARTICULOS" />
+            <marker date="1465777302918" expanded="true" signature="17520:17752" ph="SELECT ID, T... ARTICULOS" />
+            <marker date="1465777302918" expanded="true" signature="19050:19318" ph="SELECT ID, T... ARTICULOS" />
+            <marker date="1465777302918" expanded="true" signature="20679:20755" ph="SELECT ID FR... ARTICULOS" />
+            <marker date="1465777302918" expanded="true" signature="21539:21591" ph="UPDATE ARTIC... " />
+            <marker date="1465777302918" expanded="true" signature="23111:23161" ph="DELETE FROM " />
+            <marker date="1465777302918" expanded="true" signature="23414:23448" ph="DELETE FROM " />
+            <marker date="1465777302918" expanded="true" signature="24078:24118" ph="DROP TABLE I... " />
+            <marker date="1465777302918" expanded="true" signature="24177:24209" ph="DROP TABLE I... " />
+            <marker date="1465777302918" expanded="true" signature="24268:24298" ph="DROP TABLE I... " />
+            <marker date="1465777302918" expanded="true" signature="24357:24387" ph="DROP TABLE I... " />
+            <marker date="1465777302918" expanded="true" signature="24446:24475" ph="DROP TABLE I... " />
+          </folding>
         </state>
       </provider>
     </entry>
