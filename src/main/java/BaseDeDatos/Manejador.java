@@ -191,6 +191,27 @@ public class Manejador {
 
     }
 
+    public void eliminarComentario(int id) {
+        Connection conn = null;
+        JdbcConnectionPool cp = JdbcConnectionPool.
+                create("jdbc:h2:~/Practica3", "sa", "");
+        try {
+            conn = cp.getConnection();
+            String sql = "DELETE FROM COMENTARIOS WHERE ID = ? ";
+            PreparedStatement prepareStatement = conn.prepareStatement(sql);
+
+            prepareStatement.setInt(1,id);
+
+            prepareStatement.executeUpdate();
+            conn.commit();
+            conn.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public void insertarComentario(Comentario comentario, int IDArt) {
         Connection conn = null;

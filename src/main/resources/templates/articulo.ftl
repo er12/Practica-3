@@ -154,7 +154,15 @@
                         <div class="form-group">
                        <textarea class="form-control" rows="2" readonly> ${coment.getComentario()} </textarea>
                         </div>
-                        <input type="submit" class="btn btn-danger" value = "Eliminar"></input>
+                        <div class="elimComent">
+                            <form action="/articulos" method="post" >
+                                <input type ="hidden" name = "eliminarComentarioV"value = "${coment.getId()}"></input>
+                                <input type="hidden" name="idArticulo" value="${id}">
+                                <input name = "eliminarComentario" type="submit" class="btn btn-danger" value = "Eliminar"></input>
+                            </form>
+
+                        </div>
+
                     </div>
                 </div>
             </#list>
@@ -221,6 +229,7 @@
     $(document).ready( function (){
         var variable= "${sesion}";
 
+        $(".elimComent").hide();
         $(".editElim").hide();
         $(".hacerComentario").hide();
 
@@ -232,7 +241,7 @@
             if ( ("${user.getUsername()}" === "${articulo.getAutor().getUsername()}") ||
             ("${user.isAdministrador()?c}" === "true") )
             {
-                console.log("editelimadm");
+                $(".elimComent").show();
                 $(".editElim").show();
             }
             else

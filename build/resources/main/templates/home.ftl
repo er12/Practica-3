@@ -53,7 +53,7 @@
                     <div class="btn-nav"><a class="btn btn-default navbar-btn " id="button_login"  href="/login"> Entrar</a></div>
                 </li>
                 <li class="logout">
-                    <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/"> Salir</a></div>
+                    <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/clear"> Salir</a></div>
                 </li>
                 <li>
                     <div class="btn-nav"><a class="btn btn-default navbar-btn" id="administrar" href="/administrarUsuarios">Administrar</a> </div>
@@ -153,14 +153,26 @@
 <script type="text/javascript">
    $(document).ready( function (){
         var variable= "${sesion}";
-        if(variable==="true") {
+       $('#administrar').hide();
+
+       if(variable==="true") {
+
             $('.login').hide();
             $('.logout').show();
+            $('.agregarArt').show();
+            if("${user.isAdministrador()?c}" === "true")
+            {
+
+                $('#administrar').show();
+            }
         }
         else {
-            $('.login').show();
-            $('.logout').hide();
+                $('.login').show();
+                $('.logout').hide();
+
+            $('.agregarArt').hide();
         }
+
     });
 
 </script>

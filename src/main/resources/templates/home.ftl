@@ -153,11 +153,18 @@
 <script type="text/javascript">
    $(document).ready( function (){
         var variable= "${sesion}";
-        if(variable==="true") {
+       $('#administrar').hide();
+
+       if(variable==="true") {
 
             $('.login').hide();
             $('.logout').show();
             $('.agregarArt').show();
+            if("${user.isAdministrador()?c}" === "true")
+            {
+
+                $('#administrar').show();
+            }
         }
         else {
                 $('.login').show();

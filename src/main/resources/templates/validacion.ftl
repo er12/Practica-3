@@ -94,7 +94,7 @@
             window.location="http://localhost:4567/";
     }
 
-    setTimeout('Redirect()',2500);
+    setTimeout('Redirect()',2000);
 </script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

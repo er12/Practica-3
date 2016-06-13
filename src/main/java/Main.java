@@ -66,6 +66,7 @@ public static void main(String [] args)
         Session session = request.session(true);
          Boolean usuario = session.attribute("sesion");
 
+        attributes.put("user",(session.attribute("currentUser")==null)?new Usuario("","","",false,false):((Usuario) session.attribute("currentUser")));
 
         Boolean admin =session.attribute("admin");
         //System.out.println(" "+ session.attribute("usuario"));
@@ -103,6 +104,8 @@ public static void main(String [] args)
         Map<String, Object> attributes = new HashMap<>();
 
         attributes.put("sesion","true");
+
+        attributes.put("user",(sesion.attribute("currentUser")==null)?new Usuario("","","",false,false):((Usuario) sesion.attribute("currentUser")));
 
         String insertArt = request.queryParams("crearArt");
         String elimArt = request.queryParams("eliminarArt");
@@ -165,10 +168,15 @@ public static void main(String [] args)
 
         attributes.put("user",(sesion.attribute("currentUser")==null)?"false":((Usuario) sesion.attribute("currentUser")));
 
-        String editarArt = request.queryParams("editarArt");
-        System.out.println("Esto es " + editarArt);
+        String editarArt = null;
+        editarArt = (request.queryParams("editarArt")==null)?"null": "nonull";
+        String elimC = request.queryParams("eliminarComentario");
+        String comen = request.queryParams("comentario");
+        int id = Integer.parseInt(request.queryParams("idArticulo"));
+        //System.out.println("holaaaerrror");
 
-        if(editarArt != null) {
+
+        if(editarArt.equals("nonull")) {
             String titulo = request.queryParams("titulo");
             String texto = request.queryParams("area-articulo");
             String etiquetas = request.queryParams("area-etiqueta");
@@ -179,20 +187,23 @@ public static void main(String [] args)
                 //System.out.println(eti);
             }
             Articulo art = new Articulo(idArt, titulo, texto, sesion.attribute("currentUser"), null, null, etiq);
-            System.out.println(art.getId()+ " "+art.getTitulo());
+            //System.out.println(art.getId()+ " "+art.getTitulo());
             bd.actualizarArticulo(art);
         }
+        else{
+            //System.out.println("break");
+            if(elimC!=null)
+            {
+                bd.eliminarComentario(Integer.valueOf(request.queryParams("eliminarComentarioV")));
+            }
+            else {
+                if (comen != null || !comen.equals("")) {
+                    Comentario com = new Comentario(0, comen, ((Usuario)sesion.attribute("currentUser")), bd.getArticulo(id));
+                    bd.insertarComentario(com, id);
 
-
-        String comen = request.queryParams("comentario");
-        //System.out.println("id es " + request.queryParams("idArticulo") + " " + comen + sesion.attribute("currentUser"));
-
-        int id = Integer.parseInt(request.queryParams("idArticulo"));
-
-        Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
-        bd.insertarComentario(com,id);//Aqui no llega no se por que!!!!!!!
-
-
+                }
+            }
+        }
 
 
         attributes.put("articulo",bd.getArticulo(id));
