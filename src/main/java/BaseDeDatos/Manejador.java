@@ -362,11 +362,15 @@ public class Manejador {
                 create("jdbc:h2:~/Practica3", "sa", "");
         try {
             conn = cp.getConnection();
-            String query = "select ETIQUETAS.ID AS ID, ETIQUETAS.ETIQUETA AS ETIQUETA from ETIQUETAS, ARTICULOS " +
-                    "WHERE ETIQUETAS.ID = ARTICULOS.ID";
+            String query = "select ETIQUETAS.ID AS ID, ETIQUETAS.ETIQUETA AS ETIQUETA " +
+                    "from ETIQUETAS, ETIQUETAS_ARTICULOS, ARTICULOS " +
+                    "WHERE ETIQUETAS.ID = ETIQUETAS_ARTICULOS.ETIQUETA " +
+                    "AND ETIQUETAS_ARTICULOS.ARTICULO = ARTICULOS.ID " +
+                    "AND ARTICULOS.ID = ?";
 
             //
             PreparedStatement prepareStatement = conn.prepareStatement(query);
+            prepareStatement.setInt(1,art);
             ResultSet rs = prepareStatement.executeQuery();
             while(rs.next()){
 

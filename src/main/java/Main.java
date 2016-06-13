@@ -157,7 +157,6 @@ public static void main(String [] args)
         attributes.put("etiquetas",bd.getEtiquetasArt(id));
 
 
-
         return new ModelAndView(attributes, "articulo.ftl");
     }, freeMarkerEngine);
 
