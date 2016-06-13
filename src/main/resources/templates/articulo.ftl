@@ -50,7 +50,7 @@
                    <div class="btn-nav"><a class="btn btn-default navbar-btn" id="button_login" href="/login" > Entrar</a></div>
                </li>
                <li>
-                   <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/" > Salir</a></div>
+                   <div class="btn-nav"><a class="btn btn-danger navbar-btn " id="button_logout" href="/clear" > Salir</a></div>
                </li>
             </ul>
         </div>
@@ -83,8 +83,10 @@
                 <form action ="/" method = "post">
             <span class="glyphicon glyphicon-time"></span>  Publicado en ${articulo.getFecha()}
             <input type = "hidden" name = "eliminarArt" value = "true">
-            <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
-            <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}">Eliminar</button>
+            <div class = "editElim">
+                <a href="#" data-toggle="modal" data-target="#login-modal" style='margin-left: 20em; font-size: 15px;'>Editar</a>
+                <button class="btn btn-link" style='margin-left: 5em; font-size: 15px;' name="elim" value="${articulo.getId()}">Eliminar</button>
+            </div>
         </form>
             </p>
 
@@ -107,6 +109,7 @@
             <!-- Blog Comments -->
 
             <!-- Comments Form -->
+            <div class = "hacerComentario" >
             <div class="well">
                 <h4>Deja tu Comentario:</h4>
                 <form role="form" action="/articulos" method="post">
@@ -116,8 +119,10 @@
                     <input type="submit" class="btn btn-primary" value = "Comentar!"></input>
                 </form>
             </div>
+            </div>
 
             <hr>
+
 
             <!-- Area para agregar articulo -->
             <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -212,15 +217,30 @@
 <script type="text/javascript">
     $(document).ready( function (){
         var variable= "${sesion}";
-        if(variable==="true") {
-            $("#button_login").hide();
-            $("#button_logout").show();
-        }
-        else {
-            if(variable==="false") {
-                $("#button_login").show();
-                $("#button_logout").hide();
+
+        $(".editElim").hide();
+        $(".hacerComentario").hide();
+
+        $("#button_login").show();
+        $("#button_logout").hide();
+
+        if(variable==="true"){
+            console.log("dita vaina!~");
+            if ( ("${user.getUsername()}" === "${articulo.getAutor().getUsername()}") ||
+            ("${user.isAdministrador()?c}" === "true") )
+            {
+                console.log("editelimadm");
+                $(".editElim").show();
             }
+            else
+            {
+                $(".editElim").hide();
+            }
+
+            $(".hacerComentario").show();
+
+                $("#button_login").hide();
+                $("#button_logout").show();
         }
     });
 

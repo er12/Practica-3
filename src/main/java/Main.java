@@ -71,10 +71,8 @@ public static void main(String [] args)
         //System.out.println(" "+ session.attribute("usuario"));
         attributes.put("sesion","false");
 
-        if(admin!=null)
-        {
-            if(admin)
-            {
+        if(admin!=null) {
+            if(admin) {
                 attributes.put("greetings","Saludos Administardor.");
                 attributes.put("sesion","true");
             }
@@ -82,14 +80,12 @@ public static void main(String [] args)
         else
         {
             if(usuario!=null){
-                if(usuario)
-                {
+                if(usuario) {
                     attributes.put("greetings","Saludos usuario mortal.");
                     attributes.put("sesion","true");
                 }
             }
-            else
-            {
+            else {
                 attributes.put("greetings","");
                 attributes.put("estado","fuera");
             }
@@ -122,7 +118,7 @@ public static void main(String [] args)
             }
 
 
-            Articulo art = new Articulo(15, titulo, texto, bd.getUsuario(sesion.attribute("currentUser")), null, null, etiq);
+            Articulo art = new Articulo(15, titulo, texto, sesion.attribute("currentUser"), null, null, etiq);
             bd.insertarArticulo(art);
         }
         else {
@@ -144,7 +140,11 @@ public static void main(String [] args)
     get("/articulos", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
         Session sesion = request.session(true);
+
         attributes.put("sesion",(sesion.attribute("sesion")==null)?"false":sesion.attribute("sesion").toString());
+
+        attributes.put("user",(sesion.attribute("currentUser")==null)?new Usuario("","","",false,false):((Usuario) sesion.attribute("currentUser")));
+
         int id = Integer.valueOf(request.queryParams("id"));
 
 
@@ -163,6 +163,8 @@ public static void main(String [] args)
         Session sesion = request.session(true);
         attributes.put("sesion","true");
 
+        attributes.put("user",(sesion.attribute("currentUser")==null)?"false":((Usuario) sesion.attribute("currentUser")));
+
         String editarArt = request.queryParams("editarArt");
         System.out.println("Esto es " + editarArt);
 
@@ -176,18 +178,18 @@ public static void main(String [] args)
                 etiq.add(new Etiqueta(0, eti));
                 //System.out.println(eti);
             }
-            Articulo art = new Articulo(idArt, titulo, texto, bd.getUsuario(sesion.attribute("currentUser")), null, null, etiq);
+            Articulo art = new Articulo(idArt, titulo, texto, sesion.attribute("currentUser"), null, null, etiq);
             System.out.println(art.getId()+ " "+art.getTitulo());
             bd.actualizarArticulo(art);
         }
 
 
         String comen = request.queryParams("comentario");
-        System.out.println("id es " + request.queryParams("idArticulo") + " " + comen + sesion.attribute("currentUser"));
+        //System.out.println("id es " + request.queryParams("idArticulo") + " " + comen + sesion.attribute("currentUser"));
 
         int id = Integer.parseInt(request.queryParams("idArticulo"));//arregle esta parte pero nose porque no llega a guardar el comentario
 
-        Comentario com = new Comentario(0,comen,new Usuario(sesion.attribute("currentUser"),"","",false,false),bd.getArticulo(id));
+        Comentario com = new Comentario(0,comen,sesion.attribute("currentUser"),bd.getArticulo(id));
         bd.insertarComentario(com,id);//Aqui no llega no se por que!!!!!!!
 
 
@@ -219,8 +221,7 @@ public static void main(String [] args)
         if(session.attribute("sesion"))
         {
             Usuario u= bd.getUsuario(request.queryParams("user"));
-            if(u.isAdministrador())
-                session.attribute("admin",true);
+
             attributes.put("message","Bienvenido " + u.getNombre());
             attributes.put("redireccionar", "si");
         }
@@ -244,7 +245,7 @@ public static void main(String [] args)
         if(bd.goodUsernamePassword(user,pass))
         {
             session.attribute("sesion", true);
-            session.attribute("currentUser", user);
+            session.attribute("currentUser", bd.getUsuario(user));
         }
         else
             session.attribute("sesion", false);
@@ -253,6 +254,15 @@ public static void main(String [] args)
 
 
     });
+
+    get("/clear", (request, response) -> {
+        request.session().removeAttribute("sesion");
+        request.session().removeAttribute("currentUser");
+        response.redirect("/");
+        return null;
+    });
+
+
     //
     /*Session session=request.session(true);
 

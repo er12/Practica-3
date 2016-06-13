@@ -157,8 +157,8 @@ public class Manejador {
             prepareStatement.setString(5,username);
             prepareStatement.setString(1, nombre);
             prepareStatement.setString(2, password);
-            prepareStatement.setString(3, String.valueOf(administrador));
-            prepareStatement.setString(4, String.valueOf(autor));
+            prepareStatement.setBoolean(3, administrador);
+            prepareStatement.setBoolean(4,autor);
 
             prepareStatement.executeUpdate();
             conn.commit();
@@ -192,33 +192,7 @@ public class Manejador {
 
     }
 
-    public void insertaretiqueta(Usuario usuario) { //chequear esta, Sera por esto que no funcionan las etiquetas
-        Connection conn = null;
-        JdbcConnectionPool cp = JdbcConnectionPool.
-                create("jdbc:h2:~/Practica3", "sa", "");
-        try {
-            conn = cp.getConnection();
-            Statement stmt = conn.createStatement();
 
-            String sql = "INSERT INTO ETIQUETA(ID, NOMBRE ) VALUES(?, ?)";
-            PreparedStatement prepareStatement = conn.prepareStatement(sql);
-
-            String nombre= usuario.getUsername();
-            //deberia ser prepareStatement.setString(1,ID);
-            prepareStatement.setString(1,nombre);//Se estara guardando en el ID el nombre?
-                                        //Aqui 2?
-
-
-            prepareStatement.executeUpdate();
-            conn.commit();
-            conn.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-    }
     public void insertarComentario(Comentario comentario, int IDArt) {
         Connection conn = null;
         JdbcConnectionPool cp = JdbcConnectionPool.
@@ -540,11 +514,8 @@ public class Manejador {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
             return articulos;
         }
-
-
     }
 
 
@@ -556,7 +527,8 @@ public class Manejador {
         try {
             conn = cp.getConnection();
             String query = "SELECT ID, TITULO, CUERPO, " +
-                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE, FECHA " +
+                    "USUARIOS.USERNAME AS USERNAME, USUARIOS.NOMBRE AS NOMBRE" +
+                    ", USUARIOS.ADMINISTRADOR AS ADMINISTRADOR , USUARIOS.AUTOR AS AUTOR , FECHA " +
                     "FROM ARTICULOS, USUARIOS " +
                     "WHERE ARTICULOS.AUTOR = USUARIOS.USERNAME " +
                     "AND ID = ?" ;
@@ -571,13 +543,11 @@ public class Manejador {
                                 rs.getString("TITULO"),
                                 rs.getString("CUERPO"),
                                 new Usuario(rs.getString("USERNAME"),
-                                        rs.getString("NOMBRE"),null,false,false),
+                                        rs.getString("NOMBRE"),null,rs.getBoolean("ADMINISTRADOR"),rs.getBoolean("AUTOR")),
                                 rs.getDate("FECHA"),
                                 getComentariosArt(rs.getInt("ID")),
                                 getEtiquetasArt(rs.getInt("ID"))
                 );
-
-
         }
         catch (SQLException e) {
             e.printStackTrace();
