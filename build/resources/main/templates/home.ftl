@@ -24,6 +24,39 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jq.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready( function (){
+            var variable= "${sesion}";
+            $('#administrar').hide();
+
+            if(variable==="true") {
+
+                $('.login').hide();
+                $('.logout').show();
+                $('.agregarArt').show();
+                if("${user.isAdministrador()?c}" === "true") {
+                    $('#administrar').show();
+                }
+            }
+            else {
+                $('.login').show();
+                $('.logout').hide();
+
+                $('.agregarArt').hide();
+            }
+
+        });
+
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
     <![endif]-->
 
 </head>
@@ -112,7 +145,7 @@
             </#list>
         <div class="col-md-4">
 
-            <!-- Blog Search Well -->
+            <!-- Blog Search Well
             <div class="well">
                 <h4>Blog Search</h4>
                 <div class="input-group">
@@ -123,8 +156,8 @@
                         </button>
                         </span>
                 </div>
-                <!-- /.input-group -->
-            </div>
+                <!-- /.input-group -
+            </div>-->
         </div>
 
     </div>
@@ -145,40 +178,6 @@
 
 </div>
 <!-- /.container -->
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<script src="js/jq.js"></script>
-
-<script type="text/javascript">
-   $(document).ready( function (){
-        var variable= "${sesion}";
-       $('#administrar').hide();
-
-       if(variable==="true") {
-
-            $('.login').hide();
-            $('.logout').show();
-            $('.agregarArt').show();
-            if("${user.isAdministrador()?c}" === "true")
-            {
-
-                $('#administrar').show();
-            }
-        }
-        else {
-                $('.login').show();
-                $('.logout').hide();
-
-            $('.agregarArt').hide();
-        }
-
-    });
-
-</script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 </body>
 

@@ -154,7 +154,8 @@
                 <form role="form" action="/articulos" method="post">
                     <div class="form-group">
                         <textarea class="form-control" name="comentario" rows="3"></textarea>
-                    </div><input type="hidden" name="idArticulo" value="${id}">
+                    </div>
+                    <input type="hidden" name="idArticulo" value="${id}">
                     <input type="submit" class="btn btn-primary" value = "Comentar!"></input>
                 </form>
             </div>
@@ -163,18 +164,17 @@
             <hr>
 
 
-            <!-- Area para agregar articulo -->
+            <!-- Area para Editar articulo -->
             <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                 <div class="modal-dialog">
                     <div class="loginmodal-container">
                         <h1>Editando Articulo</h1><br>
                         <form action="/articulos" method="post">
                             <input type = "hidden" name = "editarArt" value = "true">
-                            <input type = "hidden" name = "idArt" value = ${articulo.getId()}>
+                            <input type = "hidden" name = "idArt" value = "${articulo.getId()}">
                             <input type="text" name="titulo" value="${articulo.getTitulo()}">
                             <textarea type="text-area" style="height: 150px;" class="form-control" row="4" name="area-articulo" >${articulo.getCuerpo()}</textarea>
                             <br>
-
                             <textarea type="tags-area" style="height: 50px;" class="form-control" row="4" name="area-etiqueta" ><#list etiquetas as etiqs>${etiqs.getEtiqueta()}, </#list></textarea>
                             <br>
                             <input type="submit" name="login" class="login loginmodal-submit" value="Aceptar">

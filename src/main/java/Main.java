@@ -171,7 +171,7 @@ public static void main(String [] args)
         editarArt = (request.queryParams("editarArt")==null)?"null": "nonull";
         String elimC = request.queryParams("eliminarComentario");
         String comen = request.queryParams("comentario");
-        int id = Integer.parseInt(request.queryParams("idArticulo"));
+        int id = Integer.parseInt(request.queryParams("idArt"));
         //System.out.println("holaaaerrror");
 
 
